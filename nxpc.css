@@ -19,15 +19,15 @@
 body{
 	font-size: 62.5%;
 	color: #000;
-	background-color: #f6f8f8;
 	line-height: 1.5;
 	font-family: 'A1Gothic_R';
-	background-color: #000; /* 背景色 */
-	background-image: url(img/NxPC.vol51.bg.png); /* 画像 */
-	background-size: cover; /* 全画面 */
+	background-color: rgb(253, 244, 226); /* 背景色 */
+	background-image: url(img/back_oden.png); /* 画像 */
+	background-repeat: no-repeat;
+	background-size: 80%; /* 全画面 */
 	background-attachment: fixed; /* 固定 */
-	background-position: center bottom; /* 縦横中央 */
-
+	background-position: right bottom; /* 縦横中央 */
+	margin: 20px;
 }
 
 
@@ -65,9 +65,9 @@ body{
 	}
 
 	nav{
-		position: absolute;
-		top: 100px;
-		left: 6px;
+		/* position: absolute; */
+		/* top: 100px; */
+		/* left: 6px; */
 		font-size: 1.4rem;
 	}
 	ul{
@@ -113,7 +113,7 @@ body{
 	}
 	.time_table{
 		margin: 10px 20px;
-		background: rgba(255,255,255,0.8);
+		/* background: rgba(255,255,255,0.8); */
 	}
 	.info_table td{
 		padding: 10px;
@@ -125,8 +125,9 @@ body{
 	}
 	.main_content{
 		position: absolute;
-		top: 180px;
+		top: 300px;
 		left: 10px;
+		padding-top: 10px;
 		width: 80%;
 		transition: 0.3s;
 	}
@@ -151,10 +152,10 @@ body{
 
 	.title_logo{
 		margin: 10px;
-		width: 90vw;
-		height: 70px;
-		background: url(img/vol.51_title.png) left bottom no-repeat;
-		background-size: contain;
+		/* width: 90vw; */
+		height: 200px;
+		/* background: url(img/back_oden.png) left bottom no-repeat;
+		background-size: contain; */
 		font-size: 0;
 		z-index: 10;
 	}
@@ -287,16 +288,6 @@ body{
 	}
 	.artist_prof{
 		font-size: 0.7rem;
-	}
-
-	.title_logo{
-		margin: 10px;
-		width: 90vw;
-		height: 5vh;
-		background: url(img/vol.51_title.png) left bottom no-repeat;
-		background-size: contain;
-		font-size: 0;
-		z-index: 10;
 	}
 
 	.video-wrapper {
