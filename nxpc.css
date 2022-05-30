@@ -1,333 +1,89 @@
-@font-face{
+@font-face {
 	font-family: didot;
 	src: url('font/didot.ttc') format('truetype');
 	font-weight: bold;
 }
-@font-face{
+
+@font-face {
 	font-family: SnellRoundhand;
 	src: url('font/SnellRoundhand.ttc') format('truetype');
 }
-@font-face{
+
+@font-face {
 	font-family: A1Gothic_M;
 	src: url('font/AP-OTF-A1GothicStd-Medium.otf') format('truetype');
 }
-@font-face{
+
+@font-face {
 	font-family: A1Gothic_R;
 	src: url('font/AP-OTF-A1GothicStd-Regular.otf') format('truetype');
 }
 
-body{
+/*共通*/
+
+body {
+	background-color: rgb(253, 244, 226);
+	/* 背景色 */
 	font-size: 62.5%;
 	color: #000;
 	line-height: 1.5;
 	font-family: 'A1Gothic_R';
-	background-color: rgb(253, 244, 226); /* 背景色 */
-	background-image: url(img/back_oden.png); /* 画像 */
+}
+
+.bgimg {
+	width: 100%;
+	height: 950px;
+
+	position: fixed;
+	top: 0px;
+
+	background-image: url(img/back_oden.png);
+	/* 画像 */
 	background-repeat: no-repeat;
-	background-size: 80%; /* 全画面 */
-	background-attachment: fixed; /* 固定 */
-	background-position: right bottom; /* 縦横中央 */
-	margin: 20px;
+	/* 全画面 */
+	background-attachment: fixed;
+	z-index: -1;
+	transition: all 0.5s;
 }
 
+.bgimg-blur {
+	filter: blur(30px);
 
-/*PC*/
-@media screen and (min-width: 800px){
-	#id{
-		width: 100%;
-	}
-	#mv{
-		position: fixed;
-		margin: 0 10vw;
-		/* height:90vh; */
-		width: 80vw;
-		bottom: 10px;
-		z-index: -1;
-	}
-
-	#logo_wrap{
-		display: block;
-		width: 20%;
-		margin: 0 auto;
-		padding-top: 20%;
-	}
-
-	#theme{
-		font-size: 5rem;
-	}
-
-	#vol{
-		font-size: 1.6rem;
-		color: #c3d60a;
-		position: absolute;
-		left: 350px;
-		top: 10px;
-	}
-
-	nav{
-		/* position: absolute; */
-		/* top: 100px; */
-		/* left: 6px; */
-		font-size: 1.4rem;
-	}
-	ul{
-		display: flex;
-	}
-
-	li{
-		padding-right: 20px;
-	}
-
-	h3{
-		font-size: 1.6rem;
-	}
-
-	p{
-		font-size: 1.2rem;
-	}
-	td{
-		font-size: 1.2rem;
-	}
-	.blotter{
-		display: inline-block;
-		width: 35px;
-		height: 60px;
-		overflow: hidden;
-	}
-	.b-canvas{
-		position: relative;
-		top: -35px;
-		left: 3px;
-		z-index: -1;
-	}
-	.nx_txt{
-		width: 80%;
-		margin-top: 10px;
-	}
-	.fab{
-		font-size: 40px;
-		margin: 5px 5px;
-	}
-	.info_table{
-		margin-left: 20px;
-	}
-	.time_table{
-		margin: 10px 20px;
-		/* background: rgba(255,255,255,0.8); */
-	}
-	.info_table td{
-		padding: 10px;
-	}
-	.time_table td{
-		padding: 5px;
-		border: 1px solid #333;
-		vertical-align: middle;
-	}
-	.main_content{
-		position: absolute;
-		top: 300px;
-		/* left: 10px; */
-		left: 0px;
-		padding-top: 10px;
-		width: 80%;
-		transition: 0.3s;
-	}
-	#prologue_anim{
-		font-size: 1.4rem;
-	}
-	.artist_wrap{
-		width: 20%;
-		margin: 0px 2% 20px 0;
-		max-width: 200px;
-		min-width: 160px;
-	}
-	.artist_photo{
-		width: 100%;
-	}
-	.artist_name{
-		font-size: 1.0rem;
-	}
-	.artist_prof{
-		font-size: 0.8rem;
-	}
-
-	.title_logo{
-		margin: 10px;
-		/* width: 90vw; */
-		height: 200px;
-		/* background: url(img/back_oden.png) left bottom no-repeat;
-		background-size: contain; */
-		font-size: 0;
-		z-index: 10;
-	}
-
-	.video-wrapper {
-		position: relative;
-		padding-bottom: 56.25%;
-		height: 0;
-		overflow: hidden;
-	}
-	  
-	.video-wrapper iframe,
-	.video-wrapper object,
-	.video-wrapper embed {
-		border: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	  }
 }
 
-/*スマホ*/
-@media screen and (max-width: 800px){
-	#mv{
-		position: fixed;
-		width: 100vw;
-		right: 0;
-		bottom: 30vh;
-		z-index: -1;
-	}
-	#logo_wrap{
-		display: block;
-		width: 40%;
-		margin: auto;
-		padding-top: 35vh;
-	}
-	#theme{
-		font-size: 2.0rem;
-	}
-	#vol{
-		font-size: 0.8rem;
-		color: #c3d60a;
-		position: absolute;
-		left: 132px;
-		top: 6px;
-	}
-	p{
-		font-size: 1.0rem;
-	}
-
-	ul{
-		display: flex;
-	}
-	li{
-		padding-right: 10px;
-		font-size: 1.2rem;
-	}
-	td{
-		font-size: 1.0rem;
-	}
-	.blotter{
-		display: inline-block;
-		width: 20px;
-		height: 40px;
-		overflow: hidden;
-	}
-	.b-canvas{
-		position: relative;
-		top: -18px;
-		left: 5px;
-		z-index: -1;
-	}
-	#about_content{
-		width: 92%;
-		margin: 0 4%;
-	}
-	.nx_logo{
-		display: block;
-		margin: 10px auto;
-	}
-	.fab{
-		font-size: 40px;
-		margin: 5px 5px;
-	}
-	.linksns{
-		display: flex;
-		justify-content: flex-end;
-	}
-	.info_name{
-		font-size: 1.2rem;
-		margin-top: 10px;
-	}
-	.info_table td{
-		padding: 10px;
-	}
-	.time_table td{
-		padding: 5px;
-		border: 1px solid #333;
-		vertical-align: middle;
-	}
-	.info_table{
-		margin: 0 auto;
-	}
-	.time_table{
-		margin: 10px auto;
-	}
-	#prologue_anim{
-		padding-top: 20px;
-
-	}
-
-	.main_content{
-		width: 100%;
-		position: absolute;
-		top: 100px;
-		transition: 0.3s;
-	}
-
-	.artist_wrap{
-		width: 100%;
-		margin: 10px 2%;
-	}
-	.artist_photo{
-		width: 100%;
-	}
-	.artist_name{
-		font-size: 1.0rem;
-	}
-	.artist_prof{
-		font-size: 0.7rem;
-	}
-
-	.video-wrapper {
-		position: relative;
-		padding-bottom: 56.25%;
-		height: 0;
-		overflow: hidden;
-	}
-	  
-	.video-wrapper iframe,
-	.video-wrapper object,
-	.video-wrapper embed {
-		border: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	  }
+.hellenic_wide {
+	font-family: hellenic-wide-jf, serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
-/*共通*/
+.info_name {
+	margin: 10px 0px;
+}
 
-main{
+header {
+	padding: 30px 30px 20px 30px;
+}
+
+main {
 	display: block;
+	padding: 0px 30px;
 }
 
-.flex{
+.flex {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-#theme{
+#theme {
 	font-family: 'didot';
 }
-#vol{
+
+#vol {
 	font-family: 'SnellRoundhand';
 }
-#loading{
+
+#loading {
 	display: block;
 	width: 100vw;
 	height: 100vh;
@@ -339,77 +95,395 @@ main{
 	z-index: 10;
 }
 
-.loaded{
+.loaded {
 	opacity: 0;
 	visibility: hidden;
 }
 
-
-#nxpc_logo{
+#nxpc_logo {
 	display: block;
 	stroke-dasharray: 1000px;
 	animation: logo_anim 3s forwards;
 }
 
-
-
-.title_anim1 span{
+.title_anim1 span {
 	opacity: 0;
 	animation: fadein 2s forwards;
 }
 
-.played span{
+.played span {
 	opacity: 1;
-	transform: translate(0,0);
+	transform: translate(0, 0);
 }
 
-.fa-twitter-square{
+.fa-twitter-square {
 	color: #00acee;
 }
+
 /* .fa-instagram-square{
 	color: 
 } */
-.fa-facebook-square{
+
+.fa-facebook-square {
 	color: #315096;
 }
-.close_content{
+
+.close_content {
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.5s;
 }
 
-a{
+a {
 	color: #000;
-	/* text-decoration: none; */
+	text-decoration: none;
 }
 
-a:hover{
+a:hover {
 	color: #000;
 	opacity: 0.5;
 }
 
+.info_table {
+	margin-left: 20px;
+	padding-bottom: 10px;
+}
 
-@keyframes fadein{
-	0%{
+.info_table td {
+	padding: 8px;
+}
+
+.time_table {
+	margin-left: 20px;
+	padding-top: 10px;
+	/* background: rgba(255,255,255,0.8); */
+}
+
+.time_table td {
+	padding: 8px;
+	border: 2px solid #333;
+	vertical-align: middle;
+}
+
+@keyframes fadein {
+	0% {
 		opacity: 0;
 	}
-	50%{
-		opacity:  1;
+
+	50% {
+		opacity: 1;
 	}
-	100%{
+
+	100% {
 		opacity: 1;
 	}
 }
 
-@keyframes logo_anim{
-	0%{
-		stroke-dashoffset:1000px;
+@keyframes logo_anim {
+	0% {
+		stroke-dashoffset: 1000px;
 	}
-	70%{
-		stroke-dashoffset:0px;
+
+	70% {
+		stroke-dashoffset: 0px;
 		opacity: 1;
 	}
-	100%{
+
+	100% {
 		opacity: 0;
+	}
+}
+
+/*PC*/
+@media screen and (min-width: 800px) {
+	.bgimg {
+		background-size: 80%;
+		/* 固定 */
+		background-position: right bottom;
+	}
+
+	nav {
+		font-size: 1.8rem;
+	}
+
+	#id {
+		width: 100%;
+	}
+
+	#mv {
+		position: fixed;
+		margin: 0 10vw;
+		/* height:90vh; */
+		width: 80vw;
+		bottom: 10px;
+		z-index: -1;
+	}
+
+	#logo_wrap {
+		display: block;
+		width: 20%;
+		margin: 0 auto;
+		padding-top: 20%;
+	}
+
+	#theme {
+		font-size: 5rem;
+	}
+
+	#vol {
+		font-size: 1.6rem;
+		color: #c3d60a;
+		position: absolute;
+		left: 350px;
+		top: 10px;
+	}
+
+	.info_name {
+		font-size: 1.2rem;
+	}
+
+	ul {
+		display: flex;
+	}
+
+	li {
+		padding-right: 20px;
+	}
+
+	h3 {
+		font-size: 1.6rem;
+	}
+
+	p {
+		font-size: 1.2rem;
+	}
+
+	td {
+		font-size: 1.2rem;
+	}
+
+	.blotter {
+		display: inline-block;
+		width: 35px;
+		height: 60px;
+		overflow: hidden;
+	}
+
+	.b-canvas {
+		position: relative;
+		top: -35px;
+		left: 3px;
+		z-index: -1;
+	}
+
+	.nx_txt {
+		width: 80%;
+		margin: 10px 0px;
+	}
+
+	.fab {
+		font-size: 40px;
+		margin: 5px 5px;
+	}
+
+	.main_content {
+		width: 95%;
+		position: absolute;
+		/* top: 300px; */
+		/* left: 10px; */
+		padding: 10px 0px;
+		transition: 0.3s;
+	}
+
+	#prologue_anim {
+		font-size: 1.4rem;
+	}
+
+	.artist_wrap {
+		width: 20%;
+		margin: 0px 2% 20px 0;
+		max-width: 200px;
+		min-width: 160px;
+	}
+
+	.artist_photo {
+		width: 100%;
+	}
+
+	.artist_name {
+		font-size: 1.0rem;
+	}
+
+	.artist_prof {
+		font-size: 0.8rem;
+	}
+
+	.title_logo {
+		height: 200px;
+		font-size: 0;
+		z-index: 10;
+	}
+
+	.video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.video-wrapper iframe,
+	.video-wrapper object,
+	.video-wrapper embed {
+		border: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/*スマホ*/
+@media screen and (max-width: 800px) {
+	.bgimg {
+		background-size: 100%;
+		/* 固定 */
+		background-position: right 200px;
+	}
+
+	nav {
+		font-size: 1.1rem;
+	}
+
+	#mv {
+		position: fixed;
+		width: 100vw;
+		right: 0;
+		bottom: 30vh;
+		z-index: -1;
+	}
+
+	#logo_wrap {
+		display: block;
+		width: 40%;
+		margin: auto;
+		padding-top: 35vh;
+	}
+
+	#theme {
+		font-size: 2.0rem;
+	}
+
+	#vol {
+		font-size: 0.8rem;
+		color: #c3d60a;
+		position: absolute;
+		left: 132px;
+		top: 6px;
+	}
+
+	p {
+		font-size: 1.0rem;
+	}
+
+	.info_name {
+		font-size: 0.8rem;
+	}
+
+	ul {
+		display: flex;
+	}
+
+	li {
+		padding-right: 10px;
+	}
+
+	td {
+		font-size: 1.0rem;
+	}
+
+	.blotter {
+		display: inline-block;
+		width: 20px;
+		height: 40px;
+		overflow: hidden;
+	}
+
+	.b-canvas {
+		position: relative;
+		top: -18px;
+		left: 5px;
+		z-index: -1;
+	}
+
+	/* #about_content {
+		width: 92%;
+		margin: 0 4%;
+	} */
+
+	.nx_logo {
+		display: block;
+		padding: 10px;
+	}
+
+	.nx_txt {
+		margin: 10px 0px;
+	}
+
+	.fab {
+		font-size: 40px;
+		margin: 5px 5px;
+	}
+
+	.linksns {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	#prologue_anim {
+		padding-top: 20px;
+
+	}
+
+	.main_content {
+		width: 85%;
+		position: absolute;
+		/* top: 100px; */
+		transition: 0.3s;
+	}
+
+	.artist_wrap {
+		width: 100%;
+		margin: 10px 2%;
+	}
+
+	.artist_photo {
+		width: 100%;
+	}
+
+	.artist_name {
+		font-size: 1.0rem;
+	}
+
+	.artist_prof {
+		font-size: 0.7rem;
+	}
+
+	.video-wrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.video-wrapper iframe,
+	.video-wrapper object,
+	.video-wrapper embed {
+		border: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 }

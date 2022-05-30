@@ -8,12 +8,15 @@
 	<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="nxpc.css">
+	<!-- Adobe Font -->
+	<link rel="stylesheet" href="https://use.typekit.net/ccp7daq.css">
 </head>
 
 <body>
+	<div class="bgimg" id="bgimg"></div>
 	<header>
 		<!-- <h1 class= "title_logo">NxPC.Live vol.55</h1> -->
-		<img class="title_logo" src="svg/header-typography-10.svg" id="" alt="NxPC.Live vol.55">
+		<img class="title_logo" id="title_logo" src="svg/header-typography-10.svg" alt="NxPC.Live vol.55">
 	</header>
 	<main>
 		<content id="loading" class="">
@@ -34,24 +37,18 @@
 			</div>
 		</content>
 		<content id="">
-			<div id="">
-				<!-- <img src="img/title.svg" alt="NxPC.Live vol.50 [窓]"> -->
-				<!-- <h1 id="theme" class="">NxPC.Live vol.50 [窓]</h1>
-				<h2 id="vol" class="">Open house 2021</h2> -->
+			<div class="hellenic_wide">
 				<nav>
 					<ul>
-						<li><a href="#!" id="about" class="">About</a></li>
-						<li><a href="#!" id="info">Live</a></li>
-						<li><a href="#!" id="performers">Performers</a></li>
+						<li><a class="nav-item" href="#!" id="about">About</a></li>
+						<li><a class="nav-item" href="#!" id="info">Live</a></li>
+						<li><a class="nav-item" href="#!" id="performers">Performers</a></li>
 					</ul>
 				</nav>
 			</div>
-			<!-- <div id="default_content" class="main_content">
-				<p id="prologue_anim" class="title_anim1"></p>
-			</div> -->
 			<div id="about_content" class="close_content main_content">
+				<h3 class="info_name hellenic_wide">主催：NxPC.Lab</h3>
 				<img src="img/logo.png" class="nx_logo">
-				<h3 class="info_name">主催：NxPC.Lab</h3>
 				<p class="nx_txt">
 					NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
 					現代のメディア体験において必要とされる対話性、参加性をデバイス、インタフェース、ネットワークといったメディアテクノロジーを駆使することで、音楽体験を拡張し、音楽空間におけるコミュニケーションを次のステージへ導くための研究開発、イベントを実施しています。実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。
@@ -63,7 +60,7 @@
 				</div>
 			</div>
 			<div id="info_content" class="close_content main_content">
-				<p class="info_name">NxPC.Live vol.55 Odden</p>
+				<p class="info_name hellenic_wide">NxPC.Live vol.55 Odden</p>
 				<table class="info_table">
 					<tr>
 						<td>Date</td>
@@ -88,8 +85,7 @@
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
 						allowfullscreen></iframe>
 				</div> -->
-				<br></br>
-				<p class="info_name">Timetable</p>
+				<p class="info_name hellenic_wide">Timetable</p>
 				<table class="time_table">
 					<tr>
 						<td>17:00</td>
@@ -106,8 +102,8 @@
 				</table>
 			</div>
 			<div id="performers_content" class="close_content main_content">
-				<p class="info_name">NxPC's Performers</p>
-				<br></br>
+				<p class="info_name hellenic_wide">NxPC's Performers</p>
+				<br>
 				<div class="flex">
 					<div class="artist_wrap">
 						<img src="img/performer_0.jpg" class="artist_photo">
