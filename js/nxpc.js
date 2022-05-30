@@ -18,7 +18,7 @@ trigger.addEventListener("animationend",function(){
 	const loading = document.getElementById('loading');
 	loading.classList.add('loaded');
 	// opening();
-	about_content.classList.remove('close_content');
+	about_content.classList.add('close_content');
 	info_content.classList.add('close_content');
 	performers_content.classList.add('close_content');
 	default_content.classList.add('close_content');

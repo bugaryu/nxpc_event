@@ -126,7 +126,8 @@ body{
 	.main_content{
 		position: absolute;
 		top: 300px;
-		left: 10px;
+		/* left: 10px; */
+		left: 0px;
 		padding-top: 10px;
 		width: 80%;
 		transition: 0.3s;
