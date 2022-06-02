@@ -31,23 +31,22 @@ body {
 }
 
 .bgimg {
-	width: 100%;
-	height: 950px;
+	width: 100vw;
+	height: 100vh;
 
 	position: fixed;
 	top: 0px;
 
-	background-image: url(img/back_oden.png);
 	/* 画像 */
+	background-image: url("img/odden_animation.gif");
 	background-repeat: no-repeat;
-	/* 全画面 */
-	background-attachment: fixed;
+
 	z-index: -1;
 	transition: all 0.5s;
 }
 
 .bgimg-blur {
-	filter: blur(70px);
+	filter: blur(40px);
 }
 
 .hellenic_wide {
@@ -197,9 +196,8 @@ a:hover {
 /*PC*/
 @media screen and (min-width: 800px) {
 	.bgimg {
-		background-size: 80%;
-		/* 固定 */
-		background-position: right bottom;
+		background-size: 120%;
+		background-position: 2vh 5vw;
 	}
 
 	nav {
@@ -346,9 +344,8 @@ a:hover {
 /*スマホ*/
 @media screen and (max-width: 800px) {
 	.bgimg {
-		background-size: 100%;
-		/* 固定 */
-		background-position: right 200px;
+		background-size: 250%;
+		background-position: right -400px top 102px;
 	}
 
 	nav {
