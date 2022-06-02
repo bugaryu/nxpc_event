@@ -197,7 +197,7 @@ a:hover {
 @media screen and (min-width: 800px) {
 	.bgimg {
 		background-size: 120%;
-		background-position: 2vh 5vw;
+		background-position: 1vw 15vh;
 	}
 
 	nav {
@@ -345,7 +345,7 @@ a:hover {
 @media screen and (max-width: 800px) {
 	.bgimg {
 		background-size: 250%;
-		background-position: right -400px top 102px;
+		background-position: right -430px top 110px;
 	}
 
 	nav {
