@@ -1,20 +1,4 @@
 @font-face {
-	font-family: didot;
-	src: url('font/didot.ttc') format('truetype');
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: SnellRoundhand;
-	src: url('font/SnellRoundhand.ttc') format('truetype');
-}
-
-@font-face {
-	font-family: A1Gothic_M;
-	src: url('font/AP-OTF-A1GothicStd-Medium.otf') format('truetype');
-}
-
-@font-face {
 	font-family: A1Gothic_R;
 	src: url('font/AP-OTF-A1GothicStd-Regular.otf') format('truetype');
 }
@@ -27,7 +11,7 @@ body {
 	font-size: 62.5%;
 	color: #000;
 	line-height: 1.5;
-	font-family: 'A1Gothic_R';
+	/* font-family: 'A1Gothic_R'; */
 }
 
 .bgimg {
@@ -49,12 +33,6 @@ body {
 	filter: blur(40px);
 }
 
-.hellenic_wide {
-	font-family: hellenic-wide-jf, serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
 .info_name {
 	margin: 10px 0px;
 }
@@ -73,19 +51,10 @@ main {
 	flex-wrap: wrap;
 }
 
-#theme {
-	font-family: 'didot';
-}
-
-#vol {
-	font-family: 'SnellRoundhand';
-}
-
 #loading {
 	display: block;
 	width: 100vw;
 	height: 100vh;
-	transition: all 1s;
 	background-color: #000;
 	position: fixed;
 	top: 0;
@@ -99,7 +68,7 @@ main {
 }
 
 #nxpc_logo {
-	display: block;
+	/* display: none; */
 	stroke-dasharray: 1000px;
 	animation: logo_anim 3s forwards;
 }
@@ -124,6 +93,10 @@ main {
 
 .fa-facebook-square {
 	color: #315096;
+}
+
+.content_wrap {
+	margin-bottom: 40px;
 }
 
 .close_content {
@@ -224,16 +197,12 @@ a:hover {
 		padding-top: 20%;
 	}
 
-	#theme {
-		font-size: 5rem;
-	}
-
-	#vol {
-		font-size: 1.6rem;
-		color: #c3d60a;
-		position: absolute;
-		left: 350px;
-		top: 10px;
+	.category {
+		font-size: 2.5rem;
+		font-weight: bold;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		padding-top: 20px;
 	}
 
 	.info_name {
@@ -282,15 +251,6 @@ a:hover {
 	.fab {
 		font-size: 40px;
 		margin: 5px 5px;
-	}
-
-	.main_content {
-		width: 95%;
-		position: absolute;
-		/* top: 300px; */
-		/* left: 10px; */
-		padding: 10px 0px;
-		transition: 0.3s;
 	}
 
 	#prologue_anim {
@@ -368,18 +328,6 @@ a:hover {
 		padding-top: 35vh;
 	}
 
-	#theme {
-		font-size: 2.0rem;
-	}
-
-	#vol {
-		font-size: 0.8rem;
-		color: #c3d60a;
-		position: absolute;
-		left: 132px;
-		top: 6px;
-	}
-
 	p {
 		font-size: 1.0rem;
 	}
@@ -441,13 +389,6 @@ a:hover {
 	#prologue_anim {
 		padding-top: 20px;
 
-	}
-
-	.main_content {
-		width: 85%;
-		position: absolute;
-		/* top: 100px; */
-		transition: 0.3s;
 	}
 
 	.artist_wrap {

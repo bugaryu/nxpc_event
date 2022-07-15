@@ -8,8 +8,6 @@
 	<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="reset.css">
 	<link rel="stylesheet" type="text/css" href="nxpc.css">
-	<!-- Adobe Font -->
-	<link rel="stylesheet" href="https://use.typekit.net/ccp7daq.css">
 </head>
 
 <body>
@@ -19,7 +17,7 @@
 		<img class="title_logo" id="title_logo" src="svg/logo_odden.svg" alt="NxPC.Live vol.55">
 	</header>
 	<main>
-		<content id="loading" class="">
+		<div id="loading" class="">
 			<div id="logo_wrap">
 				<svg viewBox="0 0 287.47 328.17">
 					<defs>
@@ -35,19 +33,18 @@
 					<polyline id="nxpc_logo" class="cls-1" points="3.43 310.7 64.43 10.71 216.43 317.7 284.05 10.71" />
 				</svg>
 			</div>
-		</content>
-		<content id="">
-			<div class="hellenic_wide">
-				<nav>
-					<ul>
-						<li><a class="nav-item" href="#!" id="about">About</a></li>
-						<li><a class="nav-item" href="#!" id="info">Live</a></li>
-						<li><a class="nav-item" href="#!" id="performers">Performers</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div id="about_content" class="close_content main_content">
-				<h3 class="info_name hellenic_wide">主催：NxPC.Lab</h3>
+		</div>
+		<div class="main_content container">
+			<nav>
+				<ul>
+					<li><a class="nav-item" href="#about_content" id="about">About</a></li>
+					<li><a class="nav-item" href="#info_content" id="info">Info</a></li>
+					<li><a class="nav-item" href="#performers_content" id="performers">Performers</a></li>
+				</ul>
+			</nav>
+			<div id="about_content" class="content_wrap">
+				<h1 class="category">About</h1>
+				<p class="info_name">主催：NxPC.Lab</p>
 				<img src="img/logo.png" class="nx_logo">
 				<p class="nx_txt">
 					NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
@@ -59,8 +56,9 @@
 					<a href="https://www.facebook.com/nxpclab/"><i class="fab fa-facebook-square"></i></a>
 				</div>
 			</div>
-			<div id="info_content" class="close_content main_content">
-				<p class="info_name hellenic_wide">NxPC.Live vol.55 Odden</p>
+			<div id="info_content" class="content_wrap">
+				<h1 class="category">Info</h1>
+				<p class="info_name">NxPC.Live vol.55 Odden</p>
 				<table class="info_table">
 					<tr>
 						<td>Date</td>
@@ -89,7 +87,7 @@
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
 						allowfullscreen></iframe>
 				</div>
-				<p class="info_name hellenic_wide">Timetable</p>
+				<p class="info_name">Timetable</p>
 				<table class="time_table">
 					<tr>
 						<td>DJ</td>
@@ -137,8 +135,8 @@
 					</tr>
 				</table>
 			</div>
-			<div id="performers_content" class="close_content main_content">
-				<p class="info_name hellenic_wide">NxPC's Performers</p>
+			<div id="performers_content" class="content_wrap">
+				<h1 class="category">Performers</h1>
 				<br>
 				<div class="flex">
 					<div class="artist_wrap">
@@ -184,10 +182,14 @@
 					</div>
 				</div>
 			</div>
-		</content>
+		</div>
 	</main>
 	<footer>
 	</footer>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 	<script type="text/javascript" src="js/nxpc.js"></script>
 </body>
 

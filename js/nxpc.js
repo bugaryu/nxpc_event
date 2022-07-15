@@ -1,56 +1,24 @@
-const trigger = document.getElementById('nxpc_logo');
+//logoの表示
+$(window).on('load', function () {
+	$("#loading").delay(2000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+	// $("#nxpc_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
 
-const title_logo = document.getElementById('title_logo');
-const bgimg = document.getElementById('bgimg');
-
-let about = document.getElementById('about');
-let about_content = document.getElementById('about_content');
-let info = document.getElementById('info');
-let info_content = document.getElementById('info_content');
-let performers = document.getElementById('performers');
-let performers_content = document.getElementById('performers_content');
-// let default_content = document.getElementById('default_content');
-// let material = new Blotter.ChannelSplitMaterial();
-
-trigger.addEventListener("animationend", function () {
-	const loading = document.getElementById('loading');
-	loading.classList.add('loaded');
-	// opening();
-	about_content.classList.add('close_content');
-	info_content.classList.add('close_content');
-	performers_content.classList.add('close_content');
-	// default_content.classList.add('close_content');
+	// コンテンツを非表示に
+	$('.content_wrap').hide();
 });
 
-title_logo.addEventListener('click', function () {
-	about_content.classList.add('close_content');
-	info_content.classList.add('close_content');
-	performers_content.classList.add('close_content');
-	// default_content.classList.add('close_content');
-	bgimg.classList.remove('bgimg-blur');
+// スクロールイベント
+$(window).scroll(function () {
+	$('#bgimg').css('filter', 'blur(40px)'); // 背景をブラー
 });
 
-about.addEventListener('click', function () {
-	about_content.classList.remove('close_content');
-	info_content.classList.add('close_content');
-	performers_content.classList.add('close_content');
-	// default_content.classList.add('close_content');
-	bgimg.classList.add('bgimg-blur');
-});
+// ナビゲーションクリック
+$('nav a[href*="#"]').click(function () {
+	var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+	$('.content_wrap').fadeIn();
 
-info.addEventListener('click', function () {
-	about_content.classList.add('close_content');
-	info_content.classList.remove('close_content');
-	performers_content.classList.add('close_content');
-	// default_content.classList.add('close_content');
-	bgimg.classList.add('bgimg-blur');
-});
+	var pos = $(elmHash).offset().top;  //idの上部の距離を取得
+	$('body,html').animate({ scrollTop: pos }, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
 
-performers.addEventListener('click', function () {
-	about_content.classList.add('close_content');
-	info_content.classList.add('close_content');
-	performers_content.classList.remove('close_content');
-	// default_content.classList.add('close_content');
-	bgimg.classList.add('bgimg-blur');
+	return false;
 });
-
