@@ -7,11 +7,50 @@
 
 body {
 	background-color: rgb(253, 244, 226);
+	/* background-color: rgb(222, 48, 78); */
+
 	/* 背景色 */
 	font-size: 62.5%;
-	color: #000;
+	color: rgb(255, 255, 255);
 	line-height: 1.5;
 	/* font-family: 'A1Gothic_R'; */
+}
+
+/*========= 背景動画設定のCSS ===============*/
+
+/*header設定*/
+#header {
+	position: relative;
+	/*h1の中央寄せ配置の起点とするためのrelative*/
+	height: 100vh;
+	/*高さを全画面にあわせる*/
+}
+
+#video-area {
+	position: fixed;
+	z-index: -2;
+	/*最背面に設定*/
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+#video {
+	/*天地中央配置*/
+	position: absolute;
+	z-index: -2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*縦横幅指定*/
+	width: 177.77777778vh;
+	/* 16:9 の幅→16 ÷ 9＝ 177.77% */
+	height: 56.25vw;
+	/* 16:9の幅 → 9 ÷ 16 = 56.25% */
+	min-height: 100%;
+	min-width: 100%;
 }
 
 .bgimg {
@@ -22,11 +61,13 @@ body {
 	top: 0px;
 
 	/* 画像 */
-	background-image: url("img/odden_animation.gif");
-	background-repeat: no-repeat;
+	/* background-image: url("img/odden_animation.gif"); */
+	/* background-repeat: no-repeat; */
 
 	z-index: -1;
-	transition: all 0.5s;
+	/* transition: all 0.5s; */
+
+	background-color: rgba(128, 128, 128, .5);
 }
 
 .bgimg-blur {
@@ -106,12 +147,12 @@ main {
 }
 
 a {
-	color: #000;
+	color: white;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #000;
+	color: white;
 	opacity: 0.5;
 }
 
@@ -277,9 +318,13 @@ a:hover {
 	}
 
 	.title_logo {
-		height: 200px;
+		height: 70vh;
 		font-size: 0;
 		z-index: 10;
+
+		position: absolute;
+		bottom: 10px;
+		left: 10px;
 	}
 
 	.video-wrapper {
