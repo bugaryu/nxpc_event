@@ -1,19 +1,33 @@
-@font-face {
+/* @font-face {
 	font-family: A1Gothic_R;
 	src: url('font/AP-OTF-A1GothicStd-Regular.otf') format('truetype');
+} */
+
+/*========= 源暎アンチック ===============*/
+/* https://okoneya.jp/font/download.html */
+
+@font-face {
+	font-family: GenEiAntique;
+	src: url('font/GenEiAntiqueNv5-M.ttf') format('truetype');
 }
+
+@font-face {
+	font-family: GenEiAntique-p;
+	src: url('font/GenEiAntiquePv5-M.ttf') format('truetype');
+}
+
+/*==========*/
 
 /*共通*/
 
 body {
-	background-color: rgb(253, 244, 226);
-	/* background-color: rgb(222, 48, 78); */
+	background-color: rgb(234, 0, 70);
 
 	/* 背景色 */
 	font-size: 62.5%;
 	color: rgb(255, 255, 255);
 	line-height: 1.5;
-	/* font-family: 'A1Gothic_R'; */
+	font-family: 'GenEiAntique-p';
 }
 
 /*========= 背景動画設定のCSS ===============*/
@@ -53,6 +67,8 @@ body {
 	min-width: 100%;
 }
 
+/*==========*/
+
 .bgimg {
 	width: 100vw;
 	height: 100vh;
@@ -78,17 +94,8 @@ body {
 	margin: 10px 0px;
 }
 
-header {
-	padding: 30px 30px 20px 30px;
-}
-
 .nav-wrap {
 	height: 100%;
-}
-
-main {
-	display: block;
-	padding: 0px 30px;
 }
 
 .flex {
