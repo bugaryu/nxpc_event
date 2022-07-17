@@ -74,12 +74,16 @@ body {
 	filter: blur(40px);
 }
 
-.info_name {
+.info-name {
 	margin: 10px 0px;
 }
 
 header {
 	padding: 30px 30px 20px 30px;
+}
+
+.nav-wrap {
+	height: 100%;
 }
 
 main {
@@ -108,13 +112,13 @@ main {
 	visibility: hidden;
 }
 
-#nxpc_logo {
+#nxpc-logo {
 	/* display: none; */
 	stroke-dasharray: 1000px;
-	animation: logo_anim 3s forwards;
+	animation: logo-anim 3s forwards;
 }
 
-.title_anim1 span {
+.title-anim1 span {
 	opacity: 0;
 	animation: fadein 2s forwards;
 }
@@ -136,11 +140,11 @@ main {
 	color: #315096;
 }
 
-.content_wrap {
+.content-wrap {
 	margin-bottom: 40px;
 }
 
-.close_content {
+.close-content {
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.5s;
@@ -156,23 +160,23 @@ a:hover {
 	opacity: 0.5;
 }
 
-.info_table {
+.info-table {
 	margin-left: 20px;
 	padding-bottom: 10px;
 }
 
-.info_table td {
+.info-table td {
 	padding: 8px;
 }
 
-.time_table {
+.time-table {
 	margin-left: 20px;
 	margin-bottom: 20px;
 	padding-top: 10px;
 	/* background: rgba(255,255,255,0.8); */
 }
 
-.time_table td {
+.time-table td {
 	padding: 8px;
 	border: 2px solid #333;
 	vertical-align: middle;
@@ -192,7 +196,7 @@ a:hover {
 	}
 }
 
-@keyframes logo_anim {
+@keyframes logo-anim {
 	0% {
 		stroke-dashoffset: 1000px;
 	}
@@ -231,7 +235,7 @@ a:hover {
 		z-index: -1;
 	}
 
-	#logo_wrap {
+	#logo-wrap {
 		display: block;
 		width: 20%;
 		margin: 0 auto;
@@ -246,13 +250,13 @@ a:hover {
 		padding-top: 20px;
 	}
 
-	.info_name {
+	.info-name {
 		font-size: 1.2rem;
 	}
 
-	ul {
+	/* ul {
 		display: flex;
-	}
+	} */
 
 	li {
 		padding-right: 20px;
@@ -284,7 +288,7 @@ a:hover {
 		z-index: -1;
 	}
 
-	.nx_txt {
+	.nx-txt {
 		width: 80%;
 		margin: 10px 0px;
 	}
@@ -294,37 +298,37 @@ a:hover {
 		margin: 5px 5px;
 	}
 
-	#prologue_anim {
+	#prologue-anim {
 		font-size: 1.4rem;
 	}
 
-	.artist_wrap {
+	.artist-wrap {
 		width: 20%;
 		margin: 0px 2% 20px 0;
 		max-width: 200px;
 		min-width: 160px;
 	}
 
-	.artist_photo {
+	.artist-photo {
 		width: 100%;
 	}
 
-	.artist_name {
+	.artist-name {
 		font-size: 1.0rem;
 	}
 
-	.artist_prof {
+	.artist-prof {
 		font-size: 0.8rem;
 	}
 
-	.title_logo {
+	.title-logo {
 		height: 70vh;
-		font-size: 0;
+		/* font-size: 0; */
 		z-index: 10;
 
-		position: absolute;
+		/* position: absolute;
 		bottom: 10px;
-		left: 10px;
+		left: 10px; */
 	}
 
 	.video-wrapper {
@@ -366,7 +370,7 @@ a:hover {
 		z-index: -1;
 	}
 
-	#logo_wrap {
+	#logo-wrap {
 		display: block;
 		width: 40%;
 		margin: auto;
@@ -377,13 +381,13 @@ a:hover {
 		font-size: 1.0rem;
 	}
 
-	.info_name {
+	.info-name {
 		font-size: 0.8rem;
 	}
 
-	ul {
+	/* ul {
 		display: flex;
-	}
+	} */
 
 	li {
 		padding-right: 10px;
@@ -407,17 +411,17 @@ a:hover {
 		z-index: -1;
 	}
 
-	/* #about_content {
+	/* #about-content {
 		width: 92%;
 		margin: 0 4%;
 	} */
 
-	.nx_logo {
+	.nx-logo {
 		display: block;
 		padding: 10px;
 	}
 
-	.nx_txt {
+	.nx-txt {
 		margin: 10px 0px;
 	}
 
@@ -431,25 +435,25 @@ a:hover {
 		justify-content: flex-end;
 	}
 
-	#prologue_anim {
+	#prologue-anim {
 		padding-top: 20px;
 
 	}
 
-	.artist_wrap {
+	.artist-wrap {
 		width: 100%;
 		margin: 10px 2%;
 	}
 
-	.artist_photo {
+	.artist-photo {
 		width: 100%;
 	}
 
-	.artist_name {
+	.artist-name {
 		font-size: 1.0rem;
 	}
 
-	.artist_prof {
+	.artist-prof {
 		font-size: 0.7rem;
 	}
 

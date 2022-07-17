@@ -19,15 +19,24 @@
 	<header id="header">
 		<div id="video-area">
 			<video id="video" poster="img/logo.png" webkit-playsinline playsinline muted autoplay loop>
-				<source src="movie/background_horizontal_text.mp4" type="video/mp4">
+				<source src="movie/background_horizontal.mp4" type="video/mp4">
 				<p>動画を再生できる環境ではありません。</p>
 			</video>
 		</div>
-		<img class="title_logo" id="title_logo" src="img/yataisaikai.png" alt="NxPC.Live vol.55">
+		<div class="d-flex align-items-end justify-content-between mb-3 nav-wrap">
+			<img class="title-logo" id="title-logo" src="svg/yataisaikai.svg" alt="NxPC.Live vol.55">
+			<nav>
+				<ul class="d-flex mb-3">
+					<li><a class="nav-item" href="#about-content" id="about">About</a></li>
+					<li><a class="nav-item" href="#info-content" id="info">Info</a></li>
+					<li><a class="nav-item" href="#performers-content" id="performers">Performers</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 	<main>
 		<div id="loading" class="">
-			<div id="logo_wrap">
+			<div id="logo-wrap">
 				<svg viewBox="0 0 287.47 328.17">
 					<defs>
 						<style>
@@ -39,23 +48,16 @@
 							}
 						</style>
 					</defs>
-					<polyline id="nxpc_logo" class="cls-1" points="3.43 310.7 64.43 10.71 216.43 317.7 284.05 10.71" />
+					<polyline id="nxpc-logo" class="cls-1" points="3.43 310.7 64.43 10.71 216.43 317.7 284.05 10.71" />
 				</svg>
 			</div>
 		</div>
-		<div class="main_content container">
-			<nav>
-				<ul>
-					<li><a class="nav-item" href="#about_content" id="about">About</a></li>
-					<li><a class="nav-item" href="#info_content" id="info">Info</a></li>
-					<li><a class="nav-item" href="#performers_content" id="performers">Performers</a></li>
-				</ul>
-			</nav>
-			<div id="about_content" class="content_wrap">
+		<div class="main-content container">
+			<div id="about-content" class="content-wrap">
 				<h1 class="category">About</h1>
-				<p class="info_name">主催：NxPC.Lab</p>
-				<img src="img/logo.png" class="nx_logo">
-				<p class="nx_txt">
+				<p class="info-name">主催：NxPC.Lab</p>
+				<img src="img/logo.png" class="nx-logo">
+				<p class="nx-txt">
 					NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
 					現代のメディア体験において必要とされる対話性、参加性をデバイス、インタフェース、ネットワークといったメディアテクノロジーを駆使することで、音楽体験を拡張し、音楽空間におけるコミュニケーションを次のステージへ導くための研究開発、イベントを実施しています。実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。
 				</p>
@@ -65,10 +67,10 @@
 					<a href="https://www.facebook.com/nxpclab/"><i class="fab fa-facebook-square"></i></a>
 				</div>
 			</div>
-			<div id="info_content" class="content_wrap">
+			<div id="info-content" class="content-wrap">
 				<h1 class="category">Info</h1>
-				<p class="info_name">NxPC.Live vol.56 屋台再開 あせだくつゆだく暑い夏</p>
-				<table class="info_table">
+				<p class="info-name">NxPC.Live vol.56 屋台再開 あせだくつゆだく暑い夏</p>
+				<table class="info-table">
 					<tr>
 						<td>Date</td>
 						<td>:</td>
@@ -96,8 +98,8 @@
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
 						allowfullscreen></iframe>
 				</div>
-				<p class="info_name">Timetable</p>
-				<table class="time_table">
+				<p class="info-name">Timetable</p>
+				<table class="time-table">
 					<tr>
 						<td>DJ</td>
 						<td>Ryu Ishizuka</td>
@@ -144,50 +146,50 @@
 					</tr>
 				</table>
 			</div>
-			<div id="performers_content" class="content_wrap">
+			<div id="performers-content" class="content-wrap">
 				<h1 class="category">Performers</h1>
 				<br>
 				<div class="flex">
-					<div class="artist_wrap">
-						<img src="img/ryu.jpg" class="artist_photo">
-						<p class="artist_name">Ryu Ishizuka</p>
-						<p class="artist_prof">Dancer, DJ</p>
+					<div class="artist-wrap">
+						<img src="img/ryu.jpg" class="artist-photo">
+						<p class="artist-name">Ryu Ishizuka</p>
+						<p class="artist-prof">Dancer, DJ</p>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/JACKSONkaki.png" class="artist_photo">
-						<p class="artist_name">Jackson KAKI</p>
-						<p class="artist_prof">Virtual ⇔ Real DJ</p>
+					<div class="artist-wrap">
+						<img src="img/JACKSONkaki.png" class="artist-photo">
+						<p class="artist-name">Jackson KAKI</p>
+						<p class="artist-prof">Virtual ⇔ Real DJ</p>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/ルレン.JPG" class="artist_photo">
-						<p class="artist_name">ルレン</p>
-						<p class="artist_prof">ちゃんと聞きなさい！</p>
+					<div class="artist-wrap">
+						<img src="img/ルレン.JPG" class="artist-photo">
+						<p class="artist-name">ルレン</p>
+						<p class="artist-prof">ちゃんと聞きなさい！</p>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/shiozumi.jpg" class="artist_photo">
-						<p class="artist_name">zumishio</p>
-						<p class="artist_prof">音楽を通して身体拡張します</p>
+					<div class="artist-wrap">
+						<img src="img/shiozumi.jpg" class="artist-photo">
+						<p class="artist-name">zumishio</p>
+						<p class="artist-prof">音楽を通して身体拡張します</p>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/大垣食文化研究会.jpeg" class="artist_photo">
-						<p class="artist_name">大垣食文化研究会</p>
-						<p class="artist_prof">人に吸われるだけではかわいそうじゃありませんか⁉️うどんはもっと自律的に運動するべきです‼️‼️‼️
+					<div class="artist-wrap">
+						<img src="img/大垣食文化研究会.jpeg" class="artist-photo">
+						<p class="artist-name">大垣食文化研究会</p>
+						<p class="artist-prof">人に吸われるだけではかわいそうじゃありませんか⁉️うどんはもっと自律的に運動するべきです‼️‼️‼️
 						</p>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/作業用BGM A.png" class="artist_photo">
-						<p class="artist_name">作業用BGM</p>
-						<p class="artist_prof">強く殴る</p>
+					<div class="artist-wrap">
+						<img src="img/作業用BGM A.png" class="artist-photo">
+						<p class="artist-name">作業用BGM</p>
+						<p class="artist-prof">強く殴る</p>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/森林玩偶.jpg" class="artist_photo">
-						<p class="artist_name">森林玩偶</p>
-						<p class="artist_prof">かわいく行きたい</p>
+					<div class="artist-wrap">
+						<img src="img/森林玩偶.jpg" class="artist-photo">
+						<p class="artist-name">森林玩偶</p>
+						<p class="artist-prof">かわいく行きたい</p>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/線対称.png" class="artist_photo">
-						<p class="artist_name">線対称</p>
-						<p class="artist_prof">アンビエント歩行</p>
+					<div class="artist-wrap">
+						<img src="img/線対称.png" class="artist-photo">
+						<p class="artist-name">線対称</p>
+						<p class="artist-prof">アンビエント歩行</p>
 					</div>
 				</div>
 			</div>
