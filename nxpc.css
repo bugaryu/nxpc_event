@@ -24,7 +24,7 @@ body {
 	background-color: rgb(234, 0, 70);
 
 	/* 背景色 */
-	font-size: 62.5%;
+	/* font-size: 62.5%; */
 	color: rgb(255, 255, 255);
 	line-height: 1.5;
 	font-family: 'GenEiAntique-p';
@@ -34,7 +34,7 @@ body {
 
 /*header設定*/
 #header {
-	position: relative;
+	/* position: relative; */
 	/*h1の中央寄せ配置の起点とするためのrelative*/
 	height: 100vh;
 	/*高さを全画面にあわせる*/
@@ -90,12 +90,25 @@ body {
 	filter: blur(40px);
 }
 
+main {
+	width: 360px;
+}
+
 .info-name {
 	margin: 10px 0px;
 }
 
+nav ul {
+	list-style: none;
+}
+
 .nav-wrap {
 	height: 100%;
+}
+
+.title-logo {
+	height: 70vh;
+	z-index: 10;
 }
 
 .flex {
@@ -167,15 +180,6 @@ a:hover {
 	opacity: 0.5;
 }
 
-.info-table {
-	margin-left: 20px;
-	padding-bottom: 10px;
-}
-
-.info-table td {
-	padding: 8px;
-}
-
 .time-table {
 	margin-left: 20px;
 	margin-bottom: 20px;
@@ -223,6 +227,12 @@ a:hover {
 	.bgimg {
 		background-size: 120%;
 		background-position: 1vw 15vh;
+	}
+
+	.title-logo {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
 	}
 
 	nav {
@@ -295,11 +305,6 @@ a:hover {
 		z-index: -1;
 	}
 
-	.nx-txt {
-		width: 80%;
-		margin: 10px 0px;
-	}
-
 	.fab {
 		font-size: 40px;
 		margin: 5px 5px;
@@ -328,16 +333,6 @@ a:hover {
 		font-size: 0.8rem;
 	}
 
-	.title-logo {
-		height: 70vh;
-		/* font-size: 0; */
-		z-index: 10;
-
-		/* position: absolute;
-		bottom: 10px;
-		left: 10px; */
-	}
-
 	.video-wrapper {
 		position: relative;
 		padding-bottom: 56.25%;
@@ -360,13 +355,21 @@ a:hover {
 
 /*スマホ*/
 @media screen and (max-width: 800px) {
+	main {
+		margin: 0 auto;
+	}
+
 	.bgimg {
 		background-size: 250%;
 		background-position: right -430px top 110px;
 	}
 
-	nav {
+	/* nav {
 		font-size: 1.1rem;
+	} */
+
+	.title-logo {
+		margin: 20vh auto 10vh auto;
 	}
 
 	#mv {
@@ -426,10 +429,6 @@ a:hover {
 	.nx-logo {
 		display: block;
 		padding: 10px;
-	}
-
-	.nx-txt {
-		margin: 10px 0px;
 	}
 
 	.fab {
