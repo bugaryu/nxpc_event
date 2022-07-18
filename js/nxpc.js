@@ -1,7 +1,10 @@
-//logoの表示
+// load完了時
 $(window).on('load', function () {
-	$("#loading").delay(2000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-	// $("#nxpc_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+	// ローディング画面を2.0秒（2000ms）待機してからフェードアウト
+	// フェードアウト後に要素を削除
+	$("#loading").delay(2000).fadeOut('slow', function() {
+		this.remove();
+	});
 });
 
 // スクロールイベント

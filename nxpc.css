@@ -61,6 +61,9 @@ body {
 
 /* ===== */
 
+.logo-wrap {
+	width: 20vh;
+}
 
 .bgimg {
 	width: 100vw;
@@ -226,39 +229,13 @@ footer {
 
 /*========== PC ==========*/
 
-@media screen and (min-width: 800px) {
-
-	.bgimg {
-		background-size: 120%;
-		background-position: 1vw 15vh;
-	}
-
-	#logo-wrap {
-		display: block;
-		width: 20%;
-		margin: 0 auto;
-		padding-top: 20%;
-	}
-}
+@media screen and (min-width: 800px) {}
 
 /*==========*/
 
 
 /*========== スマホ ==========*/
 
-@media screen and (max-width: 800px) {
-
-	.bgimg {
-		background-size: 250%;
-		background-position: right -430px top 110px;
-	}
-
-	#logo-wrap {
-		display: block;
-		width: 40%;
-		margin: auto;
-		padding-top: 35vh;
-	}
-}
+@media screen and (max-width: 800px) {}
 
 /*==========*/
