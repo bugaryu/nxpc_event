@@ -3,7 +3,7 @@
 	src: url('font/AP-OTF-A1GothicStd-Regular.otf') format('truetype');
 } */
 
-/*========= 源暎アンチック ===============*/
+/* ========== 源暎アンチック ========== */
 /* https://okoneya.jp/font/download.html */
 
 @font-face {
@@ -16,9 +16,10 @@
 	src: url('font/GenEiAntiquePv5-M.ttf') format('truetype');
 }
 
-/*==========*/
+/* ========== */
 
-/*共通*/
+
+/* ========== 共通 ========== */
 
 body {
 	background-color: rgb(234, 0, 70);
@@ -30,7 +31,8 @@ body {
 	font-family: 'GenEiAntique-p';
 }
 
-/*========= 背景動画設定のCSS ===============*/
+
+/* ===== 背景動画 ===== */
 
 /*header設定*/
 #header {
@@ -51,25 +53,14 @@ body {
 	overflow: hidden;
 }
 
-#video {
-	/*天地中央配置*/
-	/* position: absolute;
-	z-index: -2;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%); */
-	/*縦横幅指定*/
-	/* width: 177.77777778vh; */
-	/* 16:9 の幅→16 ÷ 9＝ 177.77% */
-	/* height: 56.25vw; */
-	/* height: 100vh; */
-	/* 16:9の幅 → 9 ÷ 16 = 56.25% */
+.bg-video {
 	min-height: 100%;
 	min-width: 100%;
 	object-fit: cover;
 }
 
-/*==========*/
+/* ===== */
+
 
 .bgimg {
 	width: 100vw;
@@ -96,6 +87,8 @@ main {
 	width: 360px;
 }
 
+/* ===== ナビゲーション ===== */
+
 nav {
 	z-index: 1;
 }
@@ -108,18 +101,11 @@ nav li {
 	padding-right: 20px;
 }
 
-.nav-wrap {
-	height: 100%;
-}
+/* ===== */
 
 .title-logo {
 	height: 70vh;
 	z-index: 10;
-}
-
-.flex {
-	display: flex;
-	flex-wrap: wrap;
 }
 
 #loading {
@@ -133,25 +119,15 @@ nav li {
 	z-index: 10;
 }
 
-.loaded {
-	opacity: 0;
-	visibility: hidden;
-}
-
 #nxpc-logo {
 	/* display: none; */
 	stroke-dasharray: 1000px;
 	animation: logo-anim 3s forwards;
 }
 
-.title-anim1 span {
-	opacity: 0;
-	animation: fadein 2s forwards;
-}
-
-.played span {
-	opacity: 1;
-	transform: translate(0, 0);
+.fab {
+	font-size: 40px;
+	margin: 5px 5px;
 }
 
 .fa-twitter-square {
@@ -164,12 +140,6 @@ nav li {
 
 .fa-facebook-square {
 	color: #315096;
-}
-
-.close-content {
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.5s;
 }
 
 a {
@@ -211,8 +181,31 @@ a:hover {
 	}
 }
 
+/* ===== 配信動画 ===== */
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	/* overflow: hidden; */
+	/* margin: 50px 30px; */
+}
+
+.video-wrapper iframe,
+.video-wrapper object,
+.video-wrapper embed {
+	/* border: 0; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* ===== */
+
 .t-head {
-	background-color: rgb(201, 0, 60, .5);
+	background-color: rgb(201, 0, 60, 0.5);
 }
 
 .t-body {
@@ -228,34 +221,16 @@ footer {
 	z-index: 2;
 }
 
-/*PC*/
+/*==========*/
+
+
+/*========== PC ==========*/
+
 @media screen and (min-width: 800px) {
+
 	.bgimg {
 		background-size: 120%;
 		background-position: 1vw 15vh;
-	}
-
-	/* .title-logo {
-		position: absolute;
-		bottom: 0px;
-		left: 0px;
-	} */
-
-	/* nav {
-		font-size: 1.8rem;
-	} */
-
-	#id {
-		width: 100%;
-	}
-
-	#mv {
-		position: fixed;
-		margin: 0 10vw;
-		/* height:90vh; */
-		width: 80vw;
-		bottom: 10px;
-		z-index: -1;
 	}
 
 	#logo-wrap {
@@ -264,107 +239,18 @@ footer {
 		margin: 0 auto;
 		padding-top: 20%;
 	}
-
-	/* ul {
-		display: flex;
-	} */
-
-	/* li {
-		padding-right: 20px;
-	} */
-
-	h3 {
-		font-size: 1.6rem;
-	}
-
-	/* p {
-		font-size: 1.2rem;
-	} */
-
-	.blotter {
-		display: inline-block;
-		width: 35px;
-		height: 60px;
-		overflow: hidden;
-	}
-
-	.b-canvas {
-		position: relative;
-		top: -35px;
-		left: 3px;
-		z-index: -1;
-	}
-
-	.fab {
-		font-size: 40px;
-		margin: 5px 5px;
-	}
-
-	#prologue-anim {
-		font-size: 1.4rem;
-	}
-
-	.artist-wrap {
-		width: 20%;
-		margin: 0px 2% 20px 0;
-		max-width: 200px;
-		min-width: 160px;
-	}
-
-	.artist-photo {
-		width: 100%;
-	}
-
-	.artist-name {
-		font-size: 1.0rem;
-	}
-
-	.artist-prof {
-		font-size: 0.8rem;
-	}
-
-	.video-wrapper {
-		position: relative;
-		padding-bottom: 56.25%;
-		height: 0;
-		/* overflow: hidden; */
-		/* margin: 50px 30px; */
-	}
-
-	.video-wrapper iframe,
-	.video-wrapper object,
-	.video-wrapper embed {
-		/* border: 0; */
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
 }
 
-/*スマホ*/
+/*==========*/
+
+
+/*========== スマホ ==========*/
+
 @media screen and (max-width: 800px) {
 
 	.bgimg {
 		background-size: 250%;
 		background-position: right -430px top 110px;
-	}
-
-	/* nav {
-		font-size: 1.1rem;
-	} */
-
-	/* .title-logo {
-		margin: 20vh auto 10vh auto;
-	} */
-
-	#mv {
-		position: fixed;
-		width: 100vw;
-		right: 0;
-		bottom: 30vh;
-		z-index: -1;
 	}
 
 	#logo-wrap {
@@ -373,91 +259,6 @@ footer {
 		margin: auto;
 		padding-top: 35vh;
 	}
-
-	/* p {
-		font-size: 1.0rem;
-	} */
-
-	/* ul {
-		display: flex;
-	} */
-
-	/* li {
-		padding-right: 10px;
-	} */
-
-	.blotter {
-		display: inline-block;
-		width: 20px;
-		height: 40px;
-		overflow: hidden;
-	}
-
-	.b-canvas {
-		position: relative;
-		top: -18px;
-		left: 5px;
-		z-index: -1;
-	}
-
-	/* #about-content {
-		width: 92%;
-		margin: 0 4%;
-	} */
-
-	.nx-logo {
-		display: block;
-		padding: 10px;
-	}
-
-	.fab {
-		font-size: 40px;
-		margin: 5px 5px;
-	}
-
-	.linksns {
-		display: flex;
-		justify-content: flex-end;
-	}
-
-	#prologue-anim {
-		padding-top: 20px;
-
-	}
-
-	.artist-wrap {
-		width: 100%;
-		margin: 10px 2%;
-	}
-
-	.artist-photo {
-		width: 100%;
-	}
-
-	.artist-name {
-		font-size: 1.0rem;
-	}
-
-	.artist-prof {
-		font-size: 0.7rem;
-	}
-
-	.video-wrapper {
-		position: relative;
-		padding-bottom: 56.25%;
-		height: 0;
-		overflow: hidden;
-		margin: 30px 0px;
-	}
-
-	.video-wrapper iframe,
-	.video-wrapper object,
-	.video-wrapper embed {
-		border: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
 }
+
+/*==========*/
