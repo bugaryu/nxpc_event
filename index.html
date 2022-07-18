@@ -14,17 +14,21 @@
 	<link rel="stylesheet" type="text/css" href="nxpc.css">
 </head>
 
-<body class="ms-3 me-3">
+<body>
 	<!-- <div class="bgimg" id="bgimg"></div> -->
-	<header id="header">
+	<header id="header" class="ps-3 pe-3">
 		<div id="video-area">
-			<video id="video" poster="img/logo.png" webkit-playsinline playsinline muted autoplay loop>
+			<video id="video" class="position-absolute top-50 start-50 translate-middle" poster="img/logo.png"
+				webkit-playsinline playsinline muted autoplay loop>
 				<source src="movie/background_horizontal.mp4" type="video/mp4">
 				<p>動画を再生できる環境ではありません。</p>
 			</video>
 		</div>
-		<img class="title-logo d-block" id="title-logo" src="svg/yataisaikai.svg" alt="NxPC.Live vol.55">
-		<nav class="position-fixed bottom-0 end-0">
+		<div
+			class="d-flex h-100 pt-5 justify-content-md-start justify-content-center align-items-center align-items-md-end">
+			<img class="title-logo" id="title-logo" src="svg/yataisaikai.svg" alt="NxPC.Live vol.55">
+		</div>
+		<nav class="position-fixed bottom-0 end-0 fs-2">
 			<ul class="d-flex mb-3">
 				<li><a class="nav-item" href="#about-content" id="about">About</a></li>
 				<li><a class="nav-item" href="#info-content" id="info">Info</a></li>
@@ -32,7 +36,7 @@
 			</ul>
 		</nav>
 	</header>
-	<main>
+	<main class="mx-auto mx-md-0 ps-3 pe-3">
 		<div id="loading" class="">
 			<div id="logo-wrap">
 				<svg viewBox="0 0 287.47 328.17">
@@ -51,10 +55,9 @@
 			</div>
 		</div>
 		<div class="main-content">
-			<div id="about-content" class="content-wrap">
-				<h1 class="category">About</h1>
-				<!-- <h1 class="category text-center align-middle bg-dak p-3">About</h1> -->
-				<p class="info-name">主催：NxPC.Lab</p>
+			<div id="about-content" class="mt-5">
+				<h1 class="display-2 pt-3 mb-3">About</h1>
+				<p>主催：NxPC.Lab</p>
 				<img src="img/logo.png" class="nx-logo">
 				<p class="nx-txt mt-3 mb-3">
 					NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
@@ -66,32 +69,53 @@
 					<a href="https://www.facebook.com/nxpclab/"><i class="fab fa-facebook-square"></i></a>
 				</div>
 			</div>
-			<div id="info-content" class="content-wrap">
-				<h1 class="category">Info</h1>
-				<p class="info-name">NxPC.Live vol.56 屋台再開 あせだくつゆだく暑い夏</p>
-				<ul class="list-group list-group-flush lh-lg mb-5">
-					<!-- bg-dark  -->
-					<li class="list-group-item bg-transparent text-light">Date : 2022.7.23 Sat. ~ 2022.7.24 Sun.</li>
-					<li class="list-group-item bg-transparent text-light">Open : 17:50</li>
-					<li class="list-group-item bg-transparent text-light">Start : 18:00~</li>
-					<li class="list-group-item bg-transparent text-light">Close : 20:40</li>
-				</ul>
-				<div class="video-wrapper">
-					<iframe width="854" height="480" src="https://www.youtube.com/embed/jBtRHo3vykE?autoplay=true"
-						title="YouTube video player" frameborder="0"
+			<div id="info-content" class="mt-5">
+				<h1 class="display-2 pt-3 mb-3">Info</h1>
+				<h2>NxPC.Live vol.56</h2>
+				<p>屋台再開 あせだくつゆだく暑い夏</p>
+				<h2 class="mt-5">Schedule</h2>
+				<table class="table text-white mb-5">
+					<thead>
+						<tr class="t-head">
+							<th scope="col" class="w-25-">Date</th>
+							<th scope="col">2022.7.23 Sat.</th>
+							<th scope="col">2022.7.24 Sun.</th>
+						</tr>
+					</thead>
+					<tbody class="t-body">
+						<tr>
+							<th scope="row">Open</th>
+							<td>17:50</td>
+							<td>17:50</td>
+						</tr>
+						<tr>
+							<th scope="row">Start</th>
+							<td>18:00~</td>
+							<td>18:00~</td>
+						</tr>
+						<tr>
+							<th scope="row">Close</th>
+							<td>20:10</td>
+							<td>20:40</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Live Streaming</h2>
+				<div class="video-wrapper mt-3 mb-5">
+					<iframe src="https://www.youtube.com/embed/jBtRHo3vykE?autoplay=true" title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
 						allowfullscreen></iframe>
 				</div>
-				<p class="info-name">Timetable</p>
+				<h2>Timetable</h2>
 				<!-- <table class="table table-dark table-striped"> -->
 				<table class="table text-white">
 					<thead>
-						<tr>
+						<tr class="t-head">
 							<th scope="col" class="w-25">7 / 23 (Sat.)</th>
 							<th scope="col">Performer</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="t-body">
 						<tr>
 							<th scope="row">18:00~</th>
 							<td>コルポナ大垣mal</td>
@@ -114,14 +138,14 @@
 						</tr>
 					</tbody>
 				</table>
-				<table class="table text-white">
+				<table class="table text-white mt-5">
 					<thead>
-						<tr>
+						<tr class="t-head">
 							<th scope="col" class="w-25">7 / 24 (Sun.)</th>
 							<th scope="col">Performer</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody class="t-body">
 						<tr>
 							<th scope="row">18:00~</th>
 							<td>作業用BGM</td>
@@ -149,119 +173,118 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
-		</div>
-		<div id="performers-content" class="content-wrap">
-			<h1 class="category">Performers</h1>
-			<div class="row row-cols-1 row-cols-md-1 g-4">
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/コルポナ大垣mal.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">コルポナ大垣mal</h5>
-							<p class="card-text">出会って4秒で結成</p>
+			<div id="performers-content" class="mt-5">
+				<h1 class="display-2 pt-3 mb-3">Performers</h1>
+				<div class="row row-cols-1 g-4 p-5 text-center">
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/コルポナ大垣mal.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">コルポナ大垣mal</h5>
+								<p class="card-text">出会って4秒で結成</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/linchen.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">ルレン</h5>
-							<p class="card-text">ナイス</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/linchen.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">ルレン</h5>
+								<p class="card-text">ナイス</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/線対称.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">線対称</h5>
-							<p class="card-text">アンビエント歩行</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/線対称.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">線対称</h5>
+								<p class="card-text">アンビエント歩行</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/ukukasai.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">uku kasai / VJ JACKSON kaki, futa takezawa</h5>
-							<p class="card-text">東京よりProducer / Singerのuku kasaiをゲストに招いて、JACKSON kaki/futa
-								takezawaと共にオーディオビジュアルのセットを披露します。</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/ukukasai.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">uku kasai</h5>
+								<p class="card-text">東京よりProducer / Singerのuku kasaiをゲストに招いて、JACKSON kaki/futa
+									takezawaと共にオーディオビジュアルのセットを披露します。</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/JACKSONkaki.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Jackson KAKI</h5>
-							<p class="card-text">VJ</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/JACKSONkaki.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Jackson KAKI</h5>
+								<p class="card-text">VJ</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/futa takezawa.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">futa takezawa</h5>
-							<p class="card-text">VJ</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/futa takezawa.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">futa takezawa</h5>
+								<p class="card-text">VJ</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/作業用BGM.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">作業用BGM</h5>
-							<p class="card-text">作業用BGMを演奏するグループです。
-								マウスを複数個PCに接続して、それぞれのクリックに音を割り当てたシステムを使用して演奏します。演奏者は交換可能です。
-								今回はゲーム中に演奏します。対戦も可能です。</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/作業用BGM.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">作業用BGM</h5>
+								<p class="card-text">作業用BGMを演奏するグループです。
+									マウスを複数個PCに接続して、それぞれのクリックに音を割り当てたシステムを使用して演奏します。演奏者は交換可能です。
+									今回はゲーム中に演奏します。対戦も可能です。</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/shoki.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">書紀ユニット</h5>
-							<p class="card-text">建築します！！</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/shoki.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">書紀ユニット</h5>
+								<p class="card-text">建築します！！</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/logo.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">うるちぬ</h5>
-							<p class="card-text">歯茎</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/logo.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">うるちぬ</h5>
+								<p class="card-text">歯茎</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/ryu.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Ryu Ishizuka</h5>
-							<p class="card-text">Talkbox performance（electro funk music）</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/ryu.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Ryu Ishizuka</h5>
+								<p class="card-text">Talkbox performance（electro funk music）</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/shoki.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">書紀ユニット</h5>
-							<p class="card-text">建築します！！</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/shoki.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">書紀ユニット</h5>
+								<p class="card-text">建築します！！</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col">
-					<div class="card bg-transparent border-0">
-						<img src="img/shiozumi.jpg" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">zumisio</h5>
-							<p class="card-text">水のサンプリング</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/shiozumi.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">zumisio</h5>
+								<p class="card-text">水のサンプリング</p>
+							</div>
 						</div>
 					</div>
 				</div>
