@@ -2,7 +2,11 @@
 $(window).on('load', function () {
 	// ローディング画面を2.0秒（2000ms）待機してからフェードアウト
 	// フェードアウト後に要素を削除
-	$("#loading").delay(2000).fadeOut('slow', function() {
+	// $("#loading").delay(2000).fadeOut('slow', function() {
+	// 	this.remove();
+	// });
+	// サーバの場合、読み込み後に呼ばれるため、delayをなしにする
+	$("#loading").fadeOut('slow', function() {
 		this.remove();
 	});
 });
