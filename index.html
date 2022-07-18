@@ -2,25 +2,51 @@
 <html lang="ja">
 
 <head>
-	<title>NxPC.Live vol.55 Odden</title>
+	<title>NxPC.Live vol.56 屋台再開 あせだくつゆだく暑い夏</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- アイコン -->
 	<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="reset.css">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- ローカル -->
 	<link rel="stylesheet" type="text/css" href="nxpc.css">
-	<!-- Adobe Font -->
-	<link rel="stylesheet" href="https://use.typekit.net/ccp7daq.css">
 </head>
 
 <body>
-	<div class="bgimg" id="bgimg"></div>
-	<header>
-		<!-- <h1 class= "title_logo">NxPC.Live vol.55</h1> -->
-		<img class="title_logo" id="title_logo" src="svg/logo_odden.svg" alt="NxPC.Live vol.55">
+	<!-- <div class="bgimg" id="bgimg"></div> -->
+	<header id="header" class="ps-3 pe-3">
+		<div id="video-area">
+			<video class="bg-video
+			position-absolute top-50 start-50 translate-middle
+			d-none d-sm-block" poster="" webkit-playsinline playsinline muted autoplay loop>
+				<source src="movie/background_horizontal.mp4" type="video/mp4">
+				<p>動画を再生できる環境ではありません。</p>
+			</video>
+			<video class="bg-video
+			position-absolute top-50 start-50 translate-middle
+			d-block d-sm-none" poster="" webkit-playsinline playsinline muted autoplay loop>
+				<source src="movie/background_vertical.mp4" type="video/mp4">
+				<p>動画を再生できる環境ではありません。</p>
+			</video>
+		</div>
+		<div class="d-flex h-100 pt-5 
+			justify-content-md-start justify-content-center
+			align-items-center align-items-md-end">
+			<img class="title-logo" id="title-logo" src="svg/yataisaikai.svg" alt="NxPC.Live vol.55">
+		</div>
+		<nav class="position-fixed bottom-0 end-0 fs-2">
+			<ul class="d-flex mb-3">
+				<li><a class="nav-item" href="#about-content" id="about">About</a></li>
+				<li><a class="nav-item" href="#info-content" id="info">Info</a></li>
+				<li><a class="nav-item" href="#performers-content" id="performers">Performers</a></li>
+			</ul>
+		</nav>
 	</header>
-	<main>
-		<content id="loading" class="">
-			<div id="logo_wrap">
+	<main class="mx-auto mx-md-0 ps-3 pe-3">
+		<div id="loading" class="d-flex align-items-center">
+			<div class="mx-auto logo-wrap">
 				<svg viewBox="0 0 287.47 328.17">
 					<defs>
 						<style>
@@ -32,24 +58,18 @@
 							}
 						</style>
 					</defs>
-					<polyline id="nxpc_logo" class="cls-1" points="3.43 310.7 64.43 10.71 216.43 317.7 284.05 10.71" />
+					<polyline id="nxpc-logo" class="cls-1" points="3.43 310.7 64.43 10.71 216.43 317.7 284.05 10.71" />
 				</svg>
 			</div>
-		</content>
-		<content id="">
-			<div class="hellenic_wide">
-				<nav>
-					<ul>
-						<li><a class="nav-item" href="#!" id="about">About</a></li>
-						<li><a class="nav-item" href="#!" id="info">Live</a></li>
-						<li><a class="nav-item" href="#!" id="performers">Performers</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div id="about_content" class="close_content main_content">
-				<h3 class="info_name hellenic_wide">主催：NxPC.Lab</h3>
-				<img src="img/logo.png" class="nx_logo">
-				<p class="nx_txt">
+		</div>
+		<div class="main-content">
+			<div id="about-content" class="mt-5">
+				<h1 class="display-2 pt-3 mb-3">About</h1>
+				<p>主催：NxPC.Lab</p>
+				<a href="https://nxpclab.info" target="_blank">
+					<img src="img/archive_01.jpg" class="w-100">
+				</a>
+				<p class="nx-txt mt-3 mb-3">
 					NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
 					現代のメディア体験において必要とされる対話性、参加性をデバイス、インタフェース、ネットワークといったメディアテクノロジーを駆使することで、音楽体験を拡張し、音楽空間におけるコミュニケーションを次のステージへ導くための研究開発、イベントを実施しています。実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。
 				</p>
@@ -59,135 +79,249 @@
 					<a href="https://www.facebook.com/nxpclab/"><i class="fab fa-facebook-square"></i></a>
 				</div>
 			</div>
-			<div id="info_content" class="close_content main_content">
-				<p class="info_name hellenic_wide">NxPC.Live vol.55 Odden</p>
-				<table class="info_table">
-					<tr>
-						<td>Date</td>
-						<td>:</td>
-						<td>2022.6.18 Sat.</td>
-					</tr>
-					<tr>
-						<td>Open</td>
-						<td>:</td>
-						<td>17:00</td>
-					</tr>
-					<tr>
-						<td>Start</td>
-						<td>:</td>
-						<td>17:05</td>
-					</tr>
-					<tr>
-						<td>Close</td>
-						<td>:</td>
-						<td>20:40</td>
-					</tr>
+			<div id="info-content" class="mt-5">
+				<h1 class="display-2 pt-3 mb-3">Info</h1>
+				<h2>NxPC.Live vol.56</h2>
+				<p>屋台再開 あせだくつゆだく暑い夏</p>
+				<h2 class="mt-5">Schedule</h2>
+				<table class="table text-white mb-5">
+					<thead>
+						<tr class="t-head">
+							<th scope="col" class="w-25-">Date</th>
+							<th scope="col">2022.7.23 Sat.</th>
+							<th scope="col">2022.7.24 Sun.</th>
+						</tr>
+					</thead>
+					<tbody class="t-body">
+						<tr>
+							<th scope="row">Open</th>
+							<td>17:50</td>
+							<td>17:50</td>
+						</tr>
+						<tr>
+							<th scope="row">Start</th>
+							<td>18:00~</td>
+							<td>18:00~</td>
+						</tr>
+						<tr>
+							<th scope="row">Close</th>
+							<td>20:10</td>
+							<td>20:40</td>
+						</tr>
+					</tbody>
 				</table>
-				<div class="video-wrapper">
-					<iframe width="854" height="480" src="https://www.youtube.com/embed/jBtRHo3vykE?autoplay=true"
-						title="YouTube video player" frameborder="0"
+				<h2>Live Streaming</h2>
+				<div class="video-wrapper mt-3 mb-5">
+					<iframe src="https://www.youtube.com/embed/jBtRHo3vykE?autoplay=true" title="YouTube video player"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
 						allowfullscreen></iframe>
 				</div>
-				<p class="info_name hellenic_wide">Timetable</p>
-				<table class="time_table">
-					<tr>
-						<td>DJ</td>
-						<td>Ryu Ishizuka</td>
-					</tr>
-					<tr>
-						<td>17:00</td>
-						<td>Open</td>
-					</tr>
-					<tr>
-						<td>17:05</td>
-						<td>書記ユニット</td>
-					</tr>
-					<tr>
-						<td>17:30</td>
-						<td>ルレン</td>
-					</tr>
-					<tr>
-						<td>17:55</td>
-						<td>zumishio(with. Ryu, Ose)</td>
-					</tr>
-					<tr>
-						<td>18:35</td>
-						<td>JACKSON kaki</td>
-					</tr>
-					<tr>
-						<td>19:15</td>
-						<td>大垣食文化研究会</td>
-					</tr>
-					<tr>
-						<td>19:45</td>
-						<td>作業用BGM</td>
-					</tr>
-					<tr>
-						<td>20:15</td>
-						<td>線対称</td>
-					</tr>
-					<tr>
-						<td>20:35</td>
-						<td>森林玩偶</td>
-					</tr>
-					<tr>
-						<td>20:40</td>
-						<td>Close</td>
-					</tr>
+				<h2>Timetable</h2>
+				<!-- <table class="table table-dark table-striped"> -->
+				<table class="table text-white">
+					<thead>
+						<tr class="t-head">
+							<th scope="col" class="w-25">7 / 23 (Sat.)</th>
+							<th scope="col">Performer</th>
+						</tr>
+					</thead>
+					<tbody class="t-body">
+						<tr>
+							<th scope="row">18:00~</th>
+							<td>コルポナ大垣mal</td>
+						</tr>
+						<tr>
+							<th scope="row">18:40~</th>
+							<td>ルレン</td>
+						</tr>
+						<tr>
+							<th scope="row">19:05~</th>
+							<td>線対称</td>
+						</tr>
+						<tr>
+							<th scope="row">19:30~</th>
+							<td>uku kasai / VJ JACKSON kaki, futa takezawa</td>
+						</tr>
+						<tr>
+							<th scope="row">20:10</th>
+							<td>Close</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table text-white mt-5">
+					<thead>
+						<tr class="t-head">
+							<th scope="col" class="w-25">7 / 24 (Sun.)</th>
+							<th scope="col">Performer</th>
+						</tr>
+					</thead>
+					<tbody class="t-body">
+						<tr>
+							<th scope="row">18:00~</th>
+							<td>作業用BGM</td>
+						</tr>
+						<tr>
+							<th scope="row">18:40~</th>
+							<td>書記ユニット</td>
+						</tr>
+						<tr>
+							<th scope="row">19:20~</th>
+							<td>うるちぬ</td>
+						</tr>
+						<tr>
+							<th scope="row">19:45~</th>
+							<td>Ryu Ishizuka</td>
+						</tr>
+						<tr>
+							<th scope="row">20:10~</th>
+							<td>zumisio</td>
+						</tr>
+						<tr>
+							<th scope="row">20:40</th>
+							<td>Close</td>
+						</tr>
+					</tbody>
 				</table>
 			</div>
-			<div id="performers_content" class="close_content main_content">
-				<p class="info_name hellenic_wide">NxPC's Performers</p>
-				<br>
-				<div class="flex">
-					<div class="artist_wrap">
-						<img src="img/ryu.jpg" class="artist_photo">
-						<p class="artist_name">Ryu Ishizuka</p>
-						<p class="artist_prof">Dancer, DJ</p>
+			<div id="performers-content" class="mt-5">
+				<h1 class="display-2 pt-3 mb-3">Performers</h1>
+				<div class="row row-cols-1 g-4 p-5 text-center">
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/コルポナ大垣mal.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">コルポナ大垣mal</h5>
+								<p class="card-text">出会って4秒で結成</p>
+							</div>
+						</div>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/JACKSONkaki.png" class="artist_photo">
-						<p class="artist_name">Jackson KAKI</p>
-						<p class="artist_prof">Virtual ⇔ Real DJ</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/linchen.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">ルレン</h5>
+								<p class="card-text">ナイス</p>
+							</div>
+						</div>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/ルレン.JPG" class="artist_photo">
-						<p class="artist_name">ルレン</p>
-						<p class="artist_prof">ちゃんと聞きなさい！</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/線対称.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">線対称</h5>
+								<p class="card-text">アンビエント歩行</p>
+							</div>
+						</div>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/shiozumi.jpg" class="artist_photo">
-						<p class="artist_name">zumishio</p>
-						<p class="artist_prof">音楽を通して身体拡張します</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/ukukasai.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">uku kasai</h5>
+								<p class="card-text">東京よりProducer / Singerのuku kasaiをゲストに招いて、JACKSON kaki/futa
+									takezawaと共にオーディオビジュアルのセットを披露します。</p>
+							</div>
+						</div>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/大垣食文化研究会.jpeg" class="artist_photo">
-						<p class="artist_name">大垣食文化研究会</p>
-						<p class="artist_prof">人に吸われるだけではかわいそうじゃありませんか⁉️うどんはもっと自律的に運動するべきです‼️‼️‼️
-						</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/JACKSONkaki.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Jackson KAKI</h5>
+								<p class="card-text">VJ</p>
+							</div>
+						</div>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/作業用BGM A.png" class="artist_photo">
-						<p class="artist_name">作業用BGM</p>
-						<p class="artist_prof">強く殴る</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/futa takezawa.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">futa takezawa</h5>
+								<p class="card-text">VJ</p>
+							</div>
+						</div>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/森林玩偶.jpg" class="artist_photo">
-						<p class="artist_name">森林玩偶</p>
-						<p class="artist_prof">かわいく行きたい</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/作業用BGM.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">作業用BGM</h5>
+								<p class="card-text">作業用BGMを演奏するグループです。
+									マウスを複数個PCに接続して、それぞれのクリックに音を割り当てたシステムを使用して演奏します。演奏者は交換可能です。
+									今回はゲーム中に演奏します。対戦も可能です。</p>
+							</div>
+						</div>
 					</div>
-					<div class="artist_wrap">
-						<img src="img/線対称.png" class="artist_photo">
-						<p class="artist_name">線対称</p>
-						<p class="artist_prof">アンビエント歩行</p>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/shoki.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">書紀ユニット</h5>
+								<p class="card-text">建築します！！</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/logo.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">うるちぬ</h5>
+								<p class="card-text">歯茎</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/ryu.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">Ryu Ishizuka</h5>
+								<p class="card-text">Talkbox performance（electro funk music）</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/shoki.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">書紀ユニット</h5>
+								<p class="card-text">建築します！！</p>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="card card-bg border-0">
+							<img src="img/shiozumi.jpg" class="card-img-top" alt="...">
+							<div class="card-body">
+								<h5 class="card-title">zumisio</h5>
+								<p class="card-text">水のサンプリング</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</content>
+		</div>
 	</main>
-	<footer>
+	<footer class="bg-dark p-4 position-relative">
+		<div class="d-flex flex-row-reverse bg-dark h-100 position-relative">
+			<div>
+				<img src="img/logo.png" alt="..." class="h-100">
+			</div>
+			<div class="flex-column text-end me-3">
+				<a class="stretched-link" href="https://nxpclab.info">NxPC.Lab</a>
+				<p class="text-muted"><small>Next dimension Plural media Club experience. Laboratory</small></p>
+			</div>
+		</div>
 	</footer>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script> -->
+
+	<!-- ローカル -->
 	<script type="text/javascript" src="js/nxpc.js"></script>
 </body>
 

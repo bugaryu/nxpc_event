@@ -1,33 +1,68 @@
-@font-face {
-	font-family: didot;
-	src: url('font/didot.ttc') format('truetype');
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: SnellRoundhand;
-	src: url('font/SnellRoundhand.ttc') format('truetype');
-}
-
-@font-face {
-	font-family: A1Gothic_M;
-	src: url('font/AP-OTF-A1GothicStd-Medium.otf') format('truetype');
-}
-
-@font-face {
+/* @font-face {
 	font-family: A1Gothic_R;
 	src: url('font/AP-OTF-A1GothicStd-Regular.otf') format('truetype');
+} */
+
+/* ========== 源暎アンチック ========== */
+/* https://okoneya.jp/font/download.html */
+
+@font-face {
+	font-family: GenEiAntique;
+	src: url('font/GenEiAntiqueNv5-M.ttf') format('truetype');
 }
 
-/*共通*/
+@font-face {
+	font-family: GenEiAntique-p;
+	src: url('font/GenEiAntiquePv5-M.ttf') format('truetype');
+}
+
+/* ========== */
+
+
+/* ========== 共通 ========== */
 
 body {
-	background-color: rgb(253, 244, 226);
+	background-color: rgb(234, 0, 70);
+
 	/* 背景色 */
-	font-size: 62.5%;
-	color: #000;
+	/* font-size: 62.5%; */
+	color: rgb(255, 255, 255);
 	line-height: 1.5;
-	font-family: 'A1Gothic_R';
+	font-family: 'GenEiAntique-p';
+}
+
+
+/* ===== 背景動画 ===== */
+
+/*header設定*/
+#header {
+	/* position: relative; */
+	/*h1の中央寄せ配置の起点とするためのrelative*/
+	height: 100vh;
+	/*高さを全画面にあわせる*/
+}
+
+#video-area {
+	position: fixed;
+	z-index: -2;
+	/*最背面に設定*/
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+
+.bg-video {
+	min-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+}
+
+/* ===== */
+
+.logo-wrap {
+	width: 20vh;
 }
 
 .bgimg {
@@ -38,54 +73,48 @@ body {
 	top: 0px;
 
 	/* 画像 */
-	background-image: url("img/odden_animation.gif");
-	background-repeat: no-repeat;
+	/* background-image: url("img/odden_animation.gif"); */
+	/* background-repeat: no-repeat; */
 
 	z-index: -1;
-	transition: all 0.5s;
+	/* transition: all 0.5s; */
+
+	background-color: rgba(128, 128, 128, .5);
 }
 
 .bgimg-blur {
 	filter: blur(40px);
 }
 
-.hellenic_wide {
-	font-family: hellenic-wide-jf, serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
-.info_name {
-	margin: 10px 0px;
-}
-
-header {
-	padding: 30px 30px 20px 30px;
-}
-
 main {
-	display: block;
-	padding: 0px 30px;
+	width: 360px;
 }
 
-.flex {
-	display: flex;
-	flex-wrap: wrap;
+/* ===== ナビゲーション ===== */
+
+nav {
+	z-index: 1;
 }
 
-#theme {
-	font-family: 'didot';
+nav ul {
+	list-style: none;
 }
 
-#vol {
-	font-family: 'SnellRoundhand';
+nav li {
+	padding-right: 20px;
+}
+
+/* ===== */
+
+.title-logo {
+	height: 70vh;
+	z-index: 10;
 }
 
 #loading {
 	display: block;
 	width: 100vw;
 	height: 100vh;
-	transition: all 1s;
 	background-color: #000;
 	position: fixed;
 	top: 0;
@@ -93,25 +122,15 @@ main {
 	z-index: 10;
 }
 
-.loaded {
-	opacity: 0;
-	visibility: hidden;
-}
-
-#nxpc_logo {
-	display: block;
+#nxpc-logo {
+	/* display: none; */
 	stroke-dasharray: 1000px;
-	animation: logo_anim 3s forwards;
+	animation: logo-anim 3s forwards;
 }
 
-.title_anim1 span {
-	opacity: 0;
-	animation: fadein 2s forwards;
-}
-
-.played span {
-	opacity: 1;
-	transform: translate(0, 0);
+.fab {
+	font-size: 40px;
+	margin: 5px 5px;
 }
 
 .fa-twitter-square {
@@ -126,42 +145,14 @@ main {
 	color: #315096;
 }
 
-.close_content {
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.5s;
-}
-
 a {
-	color: #000;
+	color: white;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #000;
+	color: white;
 	opacity: 0.5;
-}
-
-.info_table {
-	margin-left: 20px;
-	padding-bottom: 10px;
-}
-
-.info_table td {
-	padding: 8px;
-}
-
-.time_table {
-	margin-left: 20px;
-	margin-bottom: 20px;
-	padding-top: 10px;
-	/* background: rgba(255,255,255,0.8); */
-}
-
-.time_table td {
-	padding: 8px;
-	border: 2px solid #333;
-	vertical-align: middle;
 }
 
 @keyframes fadein {
@@ -178,7 +169,7 @@ a:hover {
 	}
 }
 
-@keyframes logo_anim {
+@keyframes logo-anim {
 	0% {
 		stroke-dashoffset: 1000px;
 	}
@@ -193,296 +184,58 @@ a:hover {
 	}
 }
 
-/*PC*/
-@media screen and (min-width: 800px) {
-	.bgimg {
-		background-size: 120%;
-		background-position: 1vw 15vh;
-	}
+/* ===== 配信動画 ===== */
 
-	nav {
-		font-size: 1.8rem;
-	}
-
-	#id {
-		width: 100%;
-	}
-
-	#mv {
-		position: fixed;
-		margin: 0 10vw;
-		/* height:90vh; */
-		width: 80vw;
-		bottom: 10px;
-		z-index: -1;
-	}
-
-	#logo_wrap {
-		display: block;
-		width: 20%;
-		margin: 0 auto;
-		padding-top: 20%;
-	}
-
-	#theme {
-		font-size: 5rem;
-	}
-
-	#vol {
-		font-size: 1.6rem;
-		color: #c3d60a;
-		position: absolute;
-		left: 350px;
-		top: 10px;
-	}
-
-	.info_name {
-		font-size: 1.2rem;
-	}
-
-	ul {
-		display: flex;
-	}
-
-	li {
-		padding-right: 20px;
-	}
-
-	h3 {
-		font-size: 1.6rem;
-	}
-
-	p {
-		font-size: 1.2rem;
-	}
-
-	td {
-		font-size: 1.2rem;
-	}
-
-	.blotter {
-		display: inline-block;
-		width: 35px;
-		height: 60px;
-		overflow: hidden;
-	}
-
-	.b-canvas {
-		position: relative;
-		top: -35px;
-		left: 3px;
-		z-index: -1;
-	}
-
-	.nx_txt {
-		width: 80%;
-		margin: 10px 0px;
-	}
-
-	.fab {
-		font-size: 40px;
-		margin: 5px 5px;
-	}
-
-	.main_content {
-		width: 95%;
-		position: absolute;
-		/* top: 300px; */
-		/* left: 10px; */
-		padding: 10px 0px;
-		transition: 0.3s;
-	}
-
-	#prologue_anim {
-		font-size: 1.4rem;
-	}
-
-	.artist_wrap {
-		width: 20%;
-		margin: 0px 2% 20px 0;
-		max-width: 200px;
-		min-width: 160px;
-	}
-
-	.artist_photo {
-		width: 100%;
-	}
-
-	.artist_name {
-		font-size: 1.0rem;
-	}
-
-	.artist_prof {
-		font-size: 0.8rem;
-	}
-
-	.title_logo {
-		height: 200px;
-		font-size: 0;
-		z-index: 10;
-	}
-
-	.video-wrapper {
-		position: relative;
-		padding-bottom: 56.25%;
-		height: 0;
-		overflow: hidden;
-		margin: 50px 30px;
-	}
-
-	.video-wrapper iframe,
-	.video-wrapper object,
-	.video-wrapper embed {
-		border: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	/* overflow: hidden; */
+	/* margin: 50px 30px; */
 }
 
-/*スマホ*/
-@media screen and (max-width: 800px) {
-	.bgimg {
-		background-size: 250%;
-		background-position: right -430px top 110px;
-	}
-
-	nav {
-		font-size: 1.1rem;
-	}
-
-	#mv {
-		position: fixed;
-		width: 100vw;
-		right: 0;
-		bottom: 30vh;
-		z-index: -1;
-	}
-
-	#logo_wrap {
-		display: block;
-		width: 40%;
-		margin: auto;
-		padding-top: 35vh;
-	}
-
-	#theme {
-		font-size: 2.0rem;
-	}
-
-	#vol {
-		font-size: 0.8rem;
-		color: #c3d60a;
-		position: absolute;
-		left: 132px;
-		top: 6px;
-	}
-
-	p {
-		font-size: 1.0rem;
-	}
-
-	.info_name {
-		font-size: 0.8rem;
-	}
-
-	ul {
-		display: flex;
-	}
-
-	li {
-		padding-right: 10px;
-	}
-
-	td {
-		font-size: 1.0rem;
-	}
-
-	.blotter {
-		display: inline-block;
-		width: 20px;
-		height: 40px;
-		overflow: hidden;
-	}
-
-	.b-canvas {
-		position: relative;
-		top: -18px;
-		left: 5px;
-		z-index: -1;
-	}
-
-	/* #about_content {
-		width: 92%;
-		margin: 0 4%;
-	} */
-
-	.nx_logo {
-		display: block;
-		padding: 10px;
-	}
-
-	.nx_txt {
-		margin: 10px 0px;
-	}
-
-	.fab {
-		font-size: 40px;
-		margin: 5px 5px;
-	}
-
-	.linksns {
-		display: flex;
-		justify-content: flex-end;
-	}
-
-	#prologue_anim {
-		padding-top: 20px;
-
-	}
-
-	.main_content {
-		width: 85%;
-		position: absolute;
-		/* top: 100px; */
-		transition: 0.3s;
-	}
-
-	.artist_wrap {
-		width: 100%;
-		margin: 10px 2%;
-	}
-
-	.artist_photo {
-		width: 100%;
-	}
-
-	.artist_name {
-		font-size: 1.0rem;
-	}
-
-	.artist_prof {
-		font-size: 0.7rem;
-	}
-
-	.video-wrapper {
-		position: relative;
-		padding-bottom: 56.25%;
-		height: 0;
-		overflow: hidden;
-		margin: 30px 0px;
-	}
-
-	.video-wrapper iframe,
-	.video-wrapper object,
-	.video-wrapper embed {
-		border: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
+.video-wrapper iframe,
+.video-wrapper object,
+.video-wrapper embed {
+	/* border: 0; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
+
+/* ===== */
+
+.t-head {
+	background-color: rgb(201, 0, 60, 0.5);
+}
+
+.t-body {
+	background-color: rgba(240, 0, 72, 0.5);
+}
+
+.card-bg {
+	background-color: rgba(240, 0, 72, 0.3);
+}
+
+footer {
+	height: 96px;
+	z-index: 2;
+}
+
+/*==========*/
+
+
+/*========== PC ==========*/
+
+@media screen and (min-width: 800px) {}
+
+/*==========*/
+
+
+/*========== スマホ ==========*/
+
+@media screen and (max-width: 800px) {}
+
+/*==========*/
