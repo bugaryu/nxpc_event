@@ -93,7 +93,7 @@ body {
 }
 
 main {
-	width: 360px;
+	width: 420px;
 }
 
 /* ===== ナビゲーション ===== */
@@ -191,6 +191,13 @@ a:hover {
 }
 
 /* ===== 配信動画 ===== */
+.nav-link {
+	color: white;
+}
+
+.nav-link:hover {
+	color: lightgray;
+}
 
 .video-wrapper {
 	position: relative;
