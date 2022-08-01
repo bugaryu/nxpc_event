@@ -20,8 +20,14 @@
 
 
 /* ========== 共通 ========== */
+html {
+	height: -webkit-fill-available;
+}
 
 body {
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+
 	background-color: rgb(234, 0, 70);
 
 	/* 背景色 */
@@ -185,6 +191,13 @@ a:hover {
 }
 
 /* ===== 配信動画 ===== */
+.nav-link {
+	color: white;
+}
+
+.nav-link:hover {
+	color: lightgray;
+}
 
 .video-wrapper {
 	position: relative;
@@ -220,8 +233,12 @@ a:hover {
 }
 
 footer {
-	height: 96px;
 	z-index: 2;
+	font-size: 0.8rem;
+}
+
+#footer-logo {
+	width: 10vh;
 }
 
 /*==========*/
