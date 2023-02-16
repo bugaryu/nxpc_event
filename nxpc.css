@@ -16,6 +16,16 @@
 	src: url('font/GenEiAntiquePv5-M.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: Helvetica-Neue;
+	src: url('font/helveticaneuecond.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Helvetica-Neue-black;
+	src: url('font/helveticaneue-blackcond.ttf') format('truetype');
+}
+
 /* ========== */
 
 
@@ -34,7 +44,8 @@ body {
 	/* font-size: 62.5%; */
 	color: rgb(255, 255, 255);
 	line-height: 1.5;
-	font-family: 'GenEiAntique-p';
+	/* font-family: 'GenEiAntique-p'; */
+	font-family: "Helvetica-Neue";
 }
 
 
