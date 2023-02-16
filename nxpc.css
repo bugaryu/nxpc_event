@@ -28,7 +28,7 @@ body {
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
 
-	background-color: rgb(234, 0, 70);
+	/* background-color: rgb(234, 0, 70); */
 
 	/* 背景色 */
 	/* font-size: 62.5%; */
@@ -44,7 +44,7 @@ body {
 #header {
 	/* position: relative; */
 	/*h1の中央寄せ配置の起点とするためのrelative*/
-	height: 100vh;
+	/* height: 100vh; */
 	/*高さを全画面にあわせる*/
 }
 
@@ -60,9 +60,12 @@ body {
 }
 
 .bg-video {
-	min-height: 100%;
+	/* min-height: 100%;
 	min-width: 100%;
-	object-fit: cover;
+	object-fit: cover; */
+	height: 100vh;
+	width: 100vw;
+	object-fit: fill;
 }
 
 /* ===== */
@@ -79,7 +82,8 @@ body {
 	top: 0px;
 
 	/* 画像 */
-	/* background-image: url("img/odden_animation.gif"); */
+	background-image: url("movie/back_ef_mobile.png");
+	/* background-image: url("movie/back_ef_mobile.gif"); */
 	/* background-repeat: no-repeat; */
 
 	z-index: -1;
@@ -220,16 +224,16 @@ a:hover {
 
 /* ===== */
 
-.t-head {
+/* .t-head {
 	background-color: rgb(201, 0, 60, 0.5);
-}
+} */
 
-.t-body {
+/* .t-body {
 	background-color: rgba(240, 0, 72, 0.5);
-}
+} */
 
 .card-bg {
-	background-color: rgba(240, 0, 72, 0.3);
+	background: none;
 }
 
 footer {
@@ -246,13 +250,22 @@ footer {
 
 /*========== PC ==========*/
 
-@media screen and (min-width: 800px) {}
+@media screen and (min-width: 800px) {
+	.bg-gif {
+		padding: 0 16vw;
+		width: 100vw;
+	}
+}
 
 /*==========*/
 
 
 /*========== スマホ ==========*/
 
-@media screen and (max-width: 800px) {}
+@media screen and (max-width: 800px) {
+	.bg-gif {
+		width: 100vw;
+	}
+}
 
 /*==========*/
