@@ -16,14 +16,16 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1);
-canvas.width=1158;
-canvas.height=770;
+canvas.width=1280;
+canvas.height=920;
 img.onload=function(){
   context.drawImage(img, 0, 0);
 }
 
 const updateImage = index => {
   img.src = currentFrame(index);
+  // 一度画像をクリアする
+  context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(img, 0, 0);
 }
 
@@ -35,8 +37,6 @@ window.addEventListener('scroll', () => {
     frameCount - 1,
     Math.ceil(scrollFraction * frameCount)
   );
-//   context.clearRect(0, 0, canvas.width, canvas.height);
-//   console.log(frameIndex)
   requestAnimationFrame(() => updateImage(frameIndex + 1))
 });
 
