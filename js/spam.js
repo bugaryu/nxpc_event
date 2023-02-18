@@ -1,5 +1,5 @@
 const html = document.documentElement;
-const canvas = document.getElementById("hero-lightpass");
+const canvas = document.getElementById("spam-cv");
 const context = canvas.getContext("2d");
 
 const frameCount = 50;

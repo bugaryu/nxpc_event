@@ -49,10 +49,9 @@ body {
 }
 
 .spam {
-	/* background-color: rgba(128, 128, 128, .5); */
 	position: fixed;
 	top: 15vh;
-	z-index: 5;
+	z-index: 1;
 	width: 100vw;
 }
 
@@ -76,15 +75,15 @@ body {
 	max-height: 100vh;
   } */
 
-  
+
 /* ===== 背景動画 ===== */
 
 /*header設定*/
 /* #header { */
-	/* position: relative; */
-	/*h1の中央寄せ配置の起点とするためのrelative*/
-	/* height: 100vh; */
-	/*高さを全画面にあわせる*/
+/* position: relative; */
+/*h1の中央寄せ配置の起点とするためのrelative*/
+/* height: 100vh; */
+/*高さを全画面にあわせる*/
 /* } */
 
 #video-area {
@@ -121,7 +120,6 @@ body {
 
 	/* 画像 */
 	background-image: url("movie/back_ef_mobile.png");
-	/* background-image: url("movie/back_ef_mobile.gif"); */
 	/* background-repeat: no-repeat; */
 
 	z-index: -1;
@@ -132,10 +130,6 @@ body {
 
 .bgimg-blur {
 	filter: blur(40px);
-}
-
-main {
-	width: 360px;
 }
 
 /* ===== ナビゲーション ===== */
@@ -155,9 +149,9 @@ nav li {
 /* ===== */
 
 /* .title-logo { */
-	/* height: 70vh; */
-	/* z-index: 10; */
-	/* border: 1px solid black; */
+/* height: 70vh; */
+/* z-index: 10; */
+/* border: 1px solid black; */
 /* } */
 
 #loading {
@@ -290,9 +284,19 @@ footer {
 /*========== PC ==========*/
 
 @media screen and (min-width: 800px) {
+
+	main {
+		width: 500px;
+	}
+
 	.title-logo {
 		width: 75%;
 	}
+
+	#spam-cv {
+		width: 75vw;
+	}
+
 }
 
 /*==========*/
@@ -301,9 +305,19 @@ footer {
 /*========== スマホ ==========*/
 
 @media screen and (max-width: 800px) {
+
+	main {
+		width: 360px;
+	}
+
 	.title-logo {
 		width: 100%;
 	}
+
+	#spam-cv {
+		width: 95vw;
+	}
+
 }
 
 /*==========*/
