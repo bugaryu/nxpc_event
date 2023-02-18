@@ -26,14 +26,7 @@
 </head>
 
 <body>
-	<!-- <img src="movie/back_ef_mobile.png"> -->
 	<!-- <div class="bgimg" id="bgimg"></div> -->
-	<!-- <img class="bg-gif" src="movie/spam_gif_2.gif" alt=""> -->
-	<!-- <video class="bg-gif d-none" poster="" webkit-playsinline playsinline muted autoplay loop>
-		<source src="movie/spam_h264.mp4" type="video/mp4">
-		<p>動画を再生できる環境ではありません。</p>
-	</video> -->
-
 	<header id="header" class="ps-3 pe-3">
 		<!-- back ground video -->
 		<div id="video-area">
@@ -47,17 +40,12 @@
 			</video>
 		</div>
 		<!-- title logo -->
-		<!-- <div class="d-flex h-100
-			justify-content-md-start justify-content-center
-			align-items-center align-items-md-end">
-			<img class="title-logo" id="title-logo" src="svg/nxpc_vol61_title.png" alt="NxPC.Live vol.55">
-		</div> -->
 		<div class="d-flext h-100t vw-100 d-flex justify-content-center">
 			<img class="title-logo" id="title-logo" src="svg/nxpc_vol61_title.png" alt="NxPC.Live vol.55">
 		</div>
-		<div class="spam fixed-topt sticky-topt top-0t position-fixed d-flex justify-content-center">
+		<!-- <div class="spam fixed-topt sticky-topt top-0t position-fixed d-flex justify-content-center">
 			<img class="apng-image w-75" src="movie/spam.gif" alt="">
-		</div>
+		</div> -->
 		<div class="vh-25 bg-warning"></div>
 		<!-- navigation -->
 		<nav class="position-fixed bottom-0 end-0 fs-2">
@@ -70,6 +58,8 @@
 	</header>
 
 	<main class="mx-auto mx-md-0 ps-3 pe-3">
+		<canvas id="hero-lightpass" /></canvas>
+
 		<!-- start loading -->
 		<div id="loading" class="d-flex align-items-center">
 			<div class="mx-auto logo-wrap">
@@ -299,6 +289,7 @@
 	<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 	<!-- ローカル -->
 	<script type="text/javascript" src="js/nxpc.js"></script>
+	<script type="text/javascript" src="js/spam.js"></script>
 </body>
 
 </html>
