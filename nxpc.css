@@ -48,6 +48,13 @@ body {
 	font-family: "Helvetica-Neue";
 }
 
+.spam {
+	/* background-color: rgba(128, 128, 128, .5); */
+	position: fixed;
+	top: 15vh;
+	z-index: 5;
+	width: 100%;
+}
 
 /* ===== 背景動画 ===== */
 
@@ -126,10 +133,11 @@ nav li {
 
 /* ===== */
 
-.title-logo {
-	height: 70vh;
-	z-index: 10;
-}
+/* .title-logo { */
+	/* height: 70vh; */
+	/* z-index: 10; */
+	/* border: 1px solid black; */
+/* } */
 
 #loading {
 	display: block;
@@ -265,6 +273,9 @@ footer {
 		padding: 0 16vw;
 		width: 100vw;
 	}
+	.title-logo {
+		width: 75%;
+	}
 }
 
 /*==========*/
@@ -275,6 +286,9 @@ footer {
 @media screen and (max-width: 800px) {
 	.bg-gif {
 		width: 100vw;
+	}
+	.title-logo {
+		width: 100%;
 	}
 }
 

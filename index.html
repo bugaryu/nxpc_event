@@ -20,9 +20,7 @@
 	<!-- アイコン -->
 	<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
 	<!-- ローカル -->
 	<link rel="stylesheet" type="text/css" href="nxpc.css">
 </head>
@@ -31,14 +29,13 @@
 	<!-- <img src="movie/back_ef_mobile.png"> -->
 	<!-- <div class="bgimg" id="bgimg"></div> -->
 	<!-- <img class="bg-gif" src="movie/spam_gif_2.gif" alt=""> -->
-	<video class="bg-gif" poster="" webkit-playsinline playsinline muted autoplay loop>
+	<!-- <video class="bg-gif d-none" poster="" webkit-playsinline playsinline muted autoplay loop>
 		<source src="movie/spam_h264.mp4" type="video/mp4">
 		<p>動画を再生できる環境ではありません。</p>
-	</video>
+	</video> -->
 
 	<header id="header" class="ps-3 pe-3">
 		<!-- back ground video -->
-		<!-- <img class="apng-image" src="movie/spam.gif" alt=""> -->
 		<div id="video-area">
 			<video class="bg-video d-none d-sm-block" poster="" webkit-playsinline playsinline muted autoplay loop>
 				<source src="movie/back_ef_pc.mp4" type="video/mp4">
@@ -55,9 +52,13 @@
 			align-items-center align-items-md-end">
 			<img class="title-logo" id="title-logo" src="svg/nxpc_vol61_title.png" alt="NxPC.Live vol.55">
 		</div> -->
-		<!-- <div class="d-flex h-100">
+		<div class="d-flext h-100t vw-100 d-flex justify-content-center">
 			<img class="title-logo" id="title-logo" src="svg/nxpc_vol61_title.png" alt="NxPC.Live vol.55">
-		</div> -->
+		</div>
+		<div class="spam fixed-topt sticky-topt top-0t position-fixed d-flex justify-content-center">
+			<img class="apng-image w-75" src="movie/spam.gif" alt="">
+		</div>
+		<div class="vh-25 bg-warning"></div>
 		<!-- navigation -->
 		<nav class="position-fixed bottom-0 end-0 fs-2">
 			<ul class="d-flex mb-3">
@@ -208,10 +209,10 @@
 				<div class="row row-cols-1 g-4 p-5 text-center">
 					<div class="col">
 						<div class="card card-bg border-0">
-							<img src="img/logo.png" class="card-img-top" alt="...">
+							<img src="img/spam_ogaki.jpeg" class="card-img-top" alt="...">
 							<div class="card-body">
 								<h5 class="card-title">スパム大垣</h5>
-								<p class="card-text">Comming soon...</p>
+								<p class="card-text">電車男の頃の伊東美咲が好きです。</p>
 							</div>
 						</div>
 					</div>
@@ -221,7 +222,9 @@
 							<div class="card-body">
 								<h5 class="card-title">Ryu Ishizuka</h5>
 								<p class="card-text">
-									Talkboxという80'sに流行したエフェクターを用いて、チューブを口にくわえてシンセサイザーの音を送り、口の中で共鳴させて人間の声のように発声する演奏法と、音に同期した映像による視覚表現を合わせることで、新旧を織り交ぜたパフォーマンスを行う。
+									Talkboxという80'sに流行したエフェクターを用いて、チューブを口にくわえてシンセサイザーの音を送り、
+									口の中で共鳴させて人間の声のように発声する演奏法と、音に同期した映像による視覚表現を合わせることで、
+									新旧を織り交ぜたパフォーマンスを行う。
 								</p>
 							</div>
 						</div>
@@ -232,7 +235,8 @@
 							<div class="card-body">
 								<h5 class="card-title">作業用BGM</h5>
 								<p class="card-text">作業用BGMを演奏するグループ 作業 (さぎょう、英語: occupation)
-									とは、日々の生活で行われ、名付けられている一群の活動と課題であり、個人と文化によって価値と意味があたえられたものである。 作業として音楽の演奏を行う。
+									とは、日々の生活で行われ、名付けられている一群の活動と課題であり、個人と文化によって価値と意味があたえられたものである。 
+									作業として音楽の演奏を行う。
 									今回はディスプレイをパンチして演奏します！
 								</p>
 							</div>
@@ -292,10 +296,7 @@
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
-
+	<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 	<!-- ローカル -->
 	<script type="text/javascript" src="js/nxpc.js"></script>
 </body>
