@@ -2,42 +2,53 @@
 <html lang="ja">
 
 <head>
-	<title>NxPC.Live vol.56 屋台再開 あせだくつゆだく暑い夏</title>
+	<title>NxPC.Live vol.61 25%減塩</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<!-- OGP -->
+	<meta property='og:title' content='NxPC.Live vol.61'>
+	<meta property='og:description'
+		content='NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
+	現代のメディア体験において必要とされる対話性、参加性をデバイス、インタフェース、ネットワークといったメディアテクノロジーを駆使することで、音楽体験を拡張し、音楽空間におけるコミュニケーションを次のステージへ導くための研究開発、イベントを実施しています。実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。'>
+	<meta property='og:url' content='https://nxpclab.info/vol.61'>
+	<meta property='og:type' content='website'>
+	<meta property='og:image' content='img/spam_6_9.jpg'>
+
+	<!-- タブアイコン -->
+	<link rel="icon" href="movie/spam.gif" type="logo.icon" />
 	<!-- アイコン -->
 	<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
 	<!-- ローカル -->
 	<link rel="stylesheet" type="text/css" href="nxpc.css">
 </head>
 
 <body>
 	<!-- <div class="bgimg" id="bgimg"></div> -->
-	<header id="header" class="ps-3 pe-3">
+	<header id="header" class="">
 		<!-- back ground video -->
 		<div id="video-area">
-			<video class="bg-video
-			position-absolute top-50 start-50 translate-middle
-			d-none d-sm-block" poster="" webkit-playsinline playsinline muted autoplay loop>
-				<source src="movie/background_horizontal.mp4" type="video/mp4">
+			<video class="bg-video d-none d-sm-block" poster="" webkit-playsinline playsinline muted autoplay loop>
+				<source src="movie/back_ef_pc.mp4" type="video/mp4">
 				<p>動画を再生できる環境ではありません。</p>
 			</video>
-			<video class="bg-video
-			position-absolute top-50 start-50 translate-middle
-			d-block d-sm-none" poster="" webkit-playsinline playsinline muted autoplay loop>
-				<source src="movie/background_vertical.mp4" type="video/mp4">
+			<video class="bg-video d-block d-sm-none" poster="" webkit-playsinline playsinline muted autoplay loop>
+				<source src="movie/back_ef_mobile.mp4" type="video/mp4">
 				<p>動画を再生できる環境ではありません。</p>
 			</video>
 		</div>
 		<!-- title logo -->
-		<div class="d-flex h-100
-			justify-content-md-start justify-content-center
-			align-items-center align-items-md-end">
-			<img class="title-logo" id="title-logo" src="svg/yataisaikai.svg" alt="NxPC.Live vol.55">
+		<div class="vw-100 d-flex justify-content-center">
+			<img class="title-logo" id="title-logo" src="svg/nxpc_vol61_title.png" alt="NxPC.Live vol.55">
 		</div>
+		<div class="spam d-flex justify-content-center">
+			<canvas id="spam-cv" class="" /></canvas>
+		</div>
+		<!-- <div class="spam fixed-topt sticky-topt top-0t position-fixed d-flex justify-content-center">
+			<img class="apng-image w-75" src="movie/spam.gif" alt="">
+		</div> -->
 		<!-- navigation -->
 		<nav class="position-fixed bottom-0 end-0 fs-2">
 			<ul class="d-flex mb-3">
@@ -72,8 +83,8 @@
 			<div id="about-content" class="mt-5">
 				<h1 class="display-2 pt-3 mb-3">About</h1>
 				<p>主催：NxPC.Lab</p>
-				<a href="https://youtu.be/jBtRHo3vykE" target="_blank">
-					<img src="img/archive_01.jpeg" class="w-100">
+				<a href="https://www.youtube.com/live/Qch6JtrvkWc" target="_blank">
+					<img src="img/archive_clubtrain.jpeg" class="w-100">
 				</a>
 				<p class="nx-txt mt-3 mb-3">
 					NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
@@ -88,38 +99,34 @@
 			<!-- info -->
 			<div id="info-content" class="mt-5">
 				<h1 class="display-2 pt-3 mb-3">Info</h1>
-				<h2>NxPC.Live vol.56</h2>
-				<p>屋台再開 あせだくつゆだく暑い夏</p>
+				<h2>『25%減塩』</h2>
+				<p>NxPC.Live vol.61</p>
 				<h2 class="mt-5">Schedule</h2>
 				<table class="table text-white mb-5">
 					<thead>
 						<tr class="t-head">
 							<th scope="col" class="w-25-">Date</th>
-							<th scope="col">2022.7.23 Sat.</th>
-							<th scope="col">2022.7.24 Sun.</th>
+							<th scope="col">2023.2.25 Sat.</th>
 						</tr>
 					</thead>
 					<tbody class="t-body">
 						<tr>
 							<th scope="row">Open</th>
-							<td>17:00</td>
-							<td>17:00</td>
+							<td>17:30</td>
 						</tr>
 						<tr>
 							<th scope="row">Start</th>
-							<td>17:30~</td>
-							<td>17:30~</td>
+							<td>17:45~</td>
 						</tr>
 						<tr>
 							<th scope="row">Close</th>
-							<td>19:40</td>
-							<td>20:10</td>
+							<td>21:00</td>
 						</tr>
 					</tbody>
 				</table>
 
 				<!-- Nav tabs -->
-				<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+				<!-- <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
 					<li class="nav-item" role="presentation">
 						<button class="nav-link active" id="first-day" data-bs-toggle="tab" data-bs-target="#first-tab"
 							type="button" role="tab" aria-controls="first-tab" aria-selected="true">
@@ -132,94 +139,58 @@
 							7 / 24 (Sun.)
 						</button>
 					</li>
-				</ul>
+				</ul> -->
 
 				<!-- Tab panes -->
 				<h2 class="mt-3">Live Streaming</h2>
 
-				<div class="tab-content">
-					<div class="tab-pane active" id="first-tab" role="tabpanel" aria-labelledby="first-day">
-						<div class="video-wrapper mt-3">
-							<iframe src="https://www.youtube.com/embed/cCWXV3AaqLY" title="YouTube video player"
-								frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-								allowfullscreen></iframe>
-						</div>
-						<h2 class="mt-5">Timetable</h2>
-						<table class="table text-white">
-							<thead>
-								<tr class="t-head">
-									<th scope="col" class="w-25">7 / 23 (Sat.)</th>
-									<th scope="col">Performer</th>
-								</tr>
-							</thead>
-							<tbody class="t-body">
-								<tr>
-									<th scope="row">17:30~</th>
-									<td>コルポナ大垣mal</td>
-								</tr>
-								<tr>
-									<th scope="row">18:10~</th>
-									<td>ルレン</td>
-								</tr>
-								<tr>
-									<th scope="row">18:35~</th>
-									<td>線対称</td>
-								</tr>
-								<tr>
-									<th scope="row">19:00~</th>
-									<td>uku kasai / VJ JACKSON kaki, futa takezawa</td>
-								</tr>
-								<tr>
-									<th scope="row">19:40</th>
-									<td>Close</td>
-								</tr>
-							</tbody>
-						</table>
+				<!-- <div class="tab-content"> -->
+				<div class="tab-pane active" id="first-tab" role="tabpanel" aria-labelledby="first-day">
+					<div class="video-wrapper mt-3">
+						<iframe src="https://www.youtube.com/embed/z0UYpyt_p4U" title="YouTube video player"
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
 					</div>
-					<div class="tab-pane" id="second-tab" role="tabpanel" aria-labelledby="second-day">
-						<div class="video-wrapper mt-3">
-							<iframe src="https://www.youtube.com/embed/SL_RzUxBgF8" title="YouTube video player"
-								frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-								allowfullscreen></iframe>
-						</div>
-						<h2 class="mt-5">Timetable</h2>
-						<table class="table text-white">
-							<thead>
-								<tr class="t-head">
-									<th scope="col" class="w-25">7 / 24 (Sun.)</th>
-									<th scope="col">Performer</th>
-								</tr>
-							</thead>
-							<tbody class="t-body">
-								<tr>
-									<th scope="row">17:30~</th>
-									<td>作業用BGM</td>
-								</tr>
-								<tr>
-									<th scope="row">18:10~</th>
-									<td>書記ユニット</td>
-								</tr>
-								<tr>
-									<th scope="row">18:50~</th>
-									<td>うるちぬ</td>
-								</tr>
-								<tr>
-									<th scope="row">19:15~</th>
-									<td>Ryu Ishizuka</td>
-								</tr>
-								<tr>
-									<th scope="row">19:40~</th>
-									<td>zumisio</td>
-								</tr>
-								<tr>
-									<th scope="row">20:10</th>
-									<td>Close</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
+					<h2 class="mt-5">Timetable</h2>
+					<table class="table text-white">
+						<thead>
+							<tr class="t-head">
+								<th scope="col" class="w-25">2 / 25</th>
+								<th scope="col">Performer</th>
+							</tr>
+						</thead>
+						<tbody class="t-body">
+							<tr>
+								<th scope="row">17:45~</th>
+								<td>スパム大垣</td>
+							</tr>
+							<tr>
+								<th scope="row">18:25~</th>
+								<td>Ryu Ishizuka</td>
+							</tr>
+							<tr>
+								<th scope="row">18:55~</th>
+								<td>作業用BGM</td>
+							</tr>
+							<tr>
+								<th scope="row">19:35~</th>
+								<td>やまもりの塩澄</td>
+							</tr>
+							<tr>
+								<th scope="row">20:00~</th>
+								<td>JACKSON kaki</td>
+							</tr>
+							<tr>
+								<th scope="row">20:45~</th>
+								<td>fussy（GUEST）</td>
+							</tr>
+							<tr>
+								<th scope="row">21:00</th>
+								<td>Close</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 			<!-- performers -->
@@ -228,38 +199,53 @@
 				<div class="row row-cols-1 g-4 p-5 text-center">
 					<div class="col">
 						<div class="card card-bg border-0">
-							<img src="img/コルポナ大垣mal.jpeg" class="card-img-top" alt="...">
+							<img src="img/spam_ogaki.jpeg" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h5 class="card-title">コルポナ大垣mal</h5>
-								<p class="card-text">出会って4秒で結成</p>
+								<h5 class="card-title">スパム大垣</h5>
+								<p class="card-text">
+									スパム大垣は様々なプラットフォームで活動する、IMAとtonoshakeによるウルトラハイパーマルチメディアクリエイトユニットです<br>
+									【主な経歴】<br>
+									・Cluster GAMEJAM2021 in SUMMER パワー部門 ひとりでもみんなでもノリノリで賞 受賞<br>
+									・M-1グランプリ2021 2回戦進出（IMA）
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col">
 						<div class="card card-bg border-0">
-							<img src="img/linchen.png" class="card-img-top" alt="...">
+							<img src="img/ryu_ishizuka.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h5 class="card-title">ルレン</h5>
-								<p class="card-text">ナイス</p>
+								<h5 class="card-title">Ryu Ishizuka</h5>
+								<p class="card-text">
+									Talkboxという80'sに流行したモジュレーターを用いて、チューブを口にくわえてシンセサイザーの音を送り、
+									口の中で共鳴させて人間の声のように発声する演奏法と、AIで自動生成した映像による視覚表現を合わせることで、
+									新旧を織り交ぜたパフォーマンスを行う。
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col">
 						<div class="card card-bg border-0">
-							<img src="img/線対称.png" class="card-img-top" alt="...">
+							<img src="img/sagyouyouBGM.png" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h5 class="card-title">線対称</h5>
-								<p class="card-text">アンビエント歩行</p>
+								<h5 class="card-title">作業用BGM</h5>
+								<p class="card-text">作業用BGMを演奏するグループ 作業 (さぎょう、英語: occupation)
+									とは、日々の生活で行われ、名付けられている一群の活動と課題であり、個人と文化によって価値と意味があたえられたものである。
+									作業として音楽の演奏を行う。<br>
+									今回はディスプレイをパンチして演奏します！
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col">
 						<div class="card card-bg border-0">
-							<img src="img/ukukasai.jpeg" class="card-img-top" alt="...">
+							<img src="img/yamamorinoshiozumi.jpeg" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h5 class="card-title">uku kasai</h5>
-								<p class="card-text">東京よりProducer / Singerのuku kasaiをゲストに招いて、JACKSON kaki/futa
-									takezawaと共にオーディオビジュアルのセットを披露します。</p>
+								<h5 class="card-title">やまもりの塩澄</h5>
+								<p class="card-text">​​「　一一一 ー ー ー　l　: lllll：　l 　止まれ　」
+									路面標識に従ってライブパフォーマンスを進行する。スキャニング技術を用いて路面標識を走査し、収集した差異を再配置することで、路面観測(Rodewatching)を行う。<br>
+									Audio：zumisio　Visual：Asuka Morita & Kanata Yamagishi
+								</p>
 							</div>
 						</div>
 					</div>
@@ -267,64 +253,25 @@
 						<div class="card card-bg border-0">
 							<img src="img/jacksonkaki.jpeg" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h5 class="card-title">Jackson KAKI</h5>
-								<p class="card-text">VJ</p>
+								<h5 class="card-title">JACKSON kaki</h5>
+								<p class="card-text">3DCG / VR,AR / Video Creator based in Tokyo , JAPAN and also he is
+									DJ plays in Shibuya. Influenced by the culture of alternative electronic music (IDM
+									/ Experimental / Avant-garde / UK Bass), he focuses on the extended expression of
+									music through new media such as 3DCG / VR/AR.
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col">
 						<div class="card card-bg border-0">
-							<img src="img/futa takezawa.jpeg" class="card-img-top" alt="...">
+							<img src="img/fussy.jpg" class="card-img-top" alt="...">
 							<div class="card-body">
-								<h5 class="card-title">futa takezawa</h5>
-								<p class="card-text">VJ</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/作業用BGM.jpeg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">作業用BGM</h5>
-								<p class="card-text">作業用BGMを演奏するグループです。
-									マウスを複数個PCに接続して、それぞれのクリックに音を割り当てたシステムを使用して演奏します。演奏者は交換可能です。
-									今回はゲーム中に演奏します。対戦も可能です。</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/shoki.jpeg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">書紀ユニット</h5>
-								<p class="card-text">建築します！！</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/logo.png" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">うるちぬ</h5>
-								<p class="card-text">歯茎</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/ryu.jpeg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">Ryu Ishizuka</h5>
-								<p class="card-text">Talkbox performance（electro funk music）</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/shiozumi.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">zumisio</h5>
-								<p class="card-text">水のサンプリング</p>
+								<h5 class="card-title">fussy</h5>
+								<p class="card-text">
+									-- GUEST --<br>
+									複合現実(Mixed Reality)空間における音楽Live表現の可能性を研究している。<br>
+									2020年 IAMAS修了
+								</p>
 							</div>
 						</div>
 					</div>
@@ -349,12 +296,10 @@
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
-
+	<script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
 	<!-- ローカル -->
 	<script type="text/javascript" src="js/nxpc.js"></script>
+	<script type="text/javascript" src="js/spam.js"></script>
 </body>
 
 </html>

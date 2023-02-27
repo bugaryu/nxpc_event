@@ -16,6 +16,16 @@
 	src: url('font/GenEiAntiquePv5-M.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: Helvetica-Neue;
+	src: url('font/helveticaneuecond.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: Helvetica-Neue-black;
+	src: url('font/helveticaneue-blackcond.ttf') format('truetype');
+}
+
 /* ========== */
 
 
@@ -28,25 +38,53 @@ body {
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
 
-	background-color: rgb(234, 0, 70);
+	background-color: rgb(0, 70, 125);
 
 	/* 背景色 */
 	/* font-size: 62.5%; */
 	color: rgb(255, 255, 255);
 	line-height: 1.5;
-	font-family: 'GenEiAntique-p';
+	/* font-family: 'GenEiAntique-p'; */
+	font-family: "Helvetica-Neue";
 }
+
+.spam {
+	position: fixed;
+	top: 15vh;
+	z-index: 1;
+	width: 100vw;
+}
+
+/* ===== スパム画像 ===== */
+
+/* html {
+	height: 100vh;
+  }
+  
+  body {
+	height: 500vh;
+	background: #000;
+  }
+  
+  canvas {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 100vw;
+	max-height: 100vh;
+  } */
 
 
 /* ===== 背景動画 ===== */
 
 /*header設定*/
-#header {
-	/* position: relative; */
-	/*h1の中央寄せ配置の起点とするためのrelative*/
-	height: 100vh;
-	/*高さを全画面にあわせる*/
-}
+/* #header { */
+/* position: relative; */
+/*h1の中央寄せ配置の起点とするためのrelative*/
+/* height: 100vh; */
+/*高さを全画面にあわせる*/
+/* } */
 
 #video-area {
 	position: fixed;
@@ -60,9 +98,11 @@ body {
 }
 
 .bg-video {
-	min-height: 100%;
-	min-width: 100%;
-	object-fit: cover;
+	/* min-height: 100%; */
+	/* min-width: 100%; */
+	height: 100%;
+	width: 100%;
+	object-fit: fill;
 }
 
 /* ===== */
@@ -79,7 +119,7 @@ body {
 	top: 0px;
 
 	/* 画像 */
-	/* background-image: url("img/odden_animation.gif"); */
+	background-image: url("movie/back_ef_mobile.png");
 	/* background-repeat: no-repeat; */
 
 	z-index: -1;
@@ -90,10 +130,6 @@ body {
 
 .bgimg-blur {
 	filter: blur(40px);
-}
-
-main {
-	width: 360px;
 }
 
 /* ===== ナビゲーション ===== */
@@ -112,10 +148,11 @@ nav li {
 
 /* ===== */
 
-.title-logo {
-	height: 70vh;
-	z-index: 10;
-}
+/* .title-logo { */
+/* height: 70vh; */
+/* z-index: 10; */
+/* border: 1px solid black; */
+/* } */
 
 #loading {
 	display: block;
@@ -220,16 +257,16 @@ a:hover {
 
 /* ===== */
 
-.t-head {
+/* .t-head {
 	background-color: rgb(201, 0, 60, 0.5);
-}
+} */
 
-.t-body {
+/* .t-body {
 	background-color: rgba(240, 0, 72, 0.5);
-}
+} */
 
 .card-bg {
-	background-color: rgba(240, 0, 72, 0.3);
+	background: none;
 }
 
 footer {
@@ -246,13 +283,41 @@ footer {
 
 /*========== PC ==========*/
 
-@media screen and (min-width: 800px) {}
+@media screen and (min-width: 800px) {
+
+	main {
+		width: 500px;
+	}
+
+	.title-logo {
+		width: 75%;
+	}
+
+	#spam-cv {
+		width: 75vw;
+	}
+
+}
 
 /*==========*/
 
 
 /*========== スマホ ==========*/
 
-@media screen and (max-width: 800px) {}
+@media screen and (max-width: 800px) {
+
+	main {
+		width: 360px;
+	}
+
+	.title-logo {
+		width: 100%;
+	}
+
+	#spam-cv {
+		width: 95vw;
+	}
+
+}
 
 /*==========*/
