@@ -2,25 +2,27 @@
 <html lang="ja">
 
 <head>
-	<title>NxPC.Live vol.61 25%減塩</title>
+	<title>NxPC.Live vol.62 NxPC.Lab (IAMAS) x CC Lab (SFC)</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<!-- OGP -->
-	<meta property='og:title' content='NxPC.Live vol.61'>
+	<meta property='og:title' content='NxPC.Live vol.62'>
 	<meta property='og:description'
 		content='NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。<br><br>
 	現代のメディア体験において必要とされる対話性、参加性をデバイス、インタフェース、ネットワークといったメディアテクノロジーを駆使することで、音楽体験を拡張し、音楽空間におけるコミュニケーションを次のステージへ導くための研究開発、イベントを実施しています。実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。'>
-	<meta property='og:url' content='https://nxpclab.info/vol.61'>
+	<meta property='og:url' content='https://nxpclab.info/vol.62'>
 	<meta property='og:type' content='website'>
-	<meta property='og:image' content='img/spam_6_9.jpg'>
+	<meta property='og:image' content='img/logo.png'>
 
 	<!-- タブアイコン -->
-	<link rel="icon" href="movie/spam.gif" type="logo.icon" />
+	<link rel="icon" href="img/logo.png" type="logo.icon" />
 	<!-- アイコン -->
 	<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+	<!-- Adobe Font -->
+	<link rel="stylesheet" href="https://use.typekit.net/fno7byc.css">
 	<!-- ローカル -->
 	<link rel="stylesheet" type="text/css" href="nxpc.css">
 </head>
@@ -31,20 +33,20 @@
 		<!-- back ground video -->
 		<div id="video-area">
 			<video class="bg-video d-none d-sm-block" poster="" webkit-playsinline playsinline muted autoplay loop>
-				<source src="movie/back_ef_pc.mp4" type="video/mp4">
+				<source src="movie/back_mv_pc.mp4" type="video/mp4">
 				<p>動画を再生できる環境ではありません。</p>
 			</video>
 			<video class="bg-video d-block d-sm-none" poster="" webkit-playsinline playsinline muted autoplay loop>
-				<source src="movie/back_ef_mobile.mp4" type="video/mp4">
+				<source src="movie/back_mv_mobile.mp4" type="video/mp4">
 				<p>動画を再生できる環境ではありません。</p>
 			</video>
 		</div>
 		<!-- title logo -->
-		<div class="vw-100 d-flex justify-content-center">
-			<img class="title-logo" id="title-logo" src="svg/nxpc_vol61_title.png" alt="NxPC.Live vol.55">
+		<div class="vw-100 vh-100 d-flex justify-content-center align-items-center">
+			<img class="title-logo" id="title-logo" src="img/vol62_title.png" alt="NxPC.Live vol.62">
 		</div>
 		<div class="spam d-flex justify-content-center">
-			<canvas id="spam-cv" class="" /></canvas>
+			<!-- <canvas id="spam-cv" class="" /></canvas> -->
 		</div>
 		<!-- <div class="spam fixed-topt sticky-topt top-0t position-fixed d-flex justify-content-center">
 			<img class="apng-image w-75" src="movie/spam.gif" alt="">
@@ -59,7 +61,7 @@
 		</nav>
 	</header>
 
-	<main class="mx-auto mx-md-0 ps-3 pe-3">
+	<main class="mx-auto ps-3 pe-3">
 		<!-- start loading -->
 		<div id="loading" class="d-flex align-items-center">
 			<div class="mx-auto logo-wrap">
@@ -99,28 +101,29 @@
 			<!-- info -->
 			<div id="info-content" class="mt-5">
 				<h1 class="display-2 pt-3 mb-3">Info</h1>
-				<h2>『25%減塩』</h2>
-				<p>NxPC.Live vol.61</p>
+				<h2>『NxPC.Lab (IAMAS) x CC Lab (SFC)』</h2>
+				<p>NxPC.Live vol.62</p>
+
 				<h2 class="mt-5">Schedule</h2>
 				<table class="table text-white mb-5">
 					<thead>
 						<tr class="t-head">
 							<th scope="col" class="w-25-">Date</th>
-							<th scope="col">2023.2.25 Sat.</th>
+							<th scope="col">2023.3.26 Sun.</th>
 						</tr>
 					</thead>
 					<tbody class="t-body">
 						<tr>
 							<th scope="row">Open</th>
-							<td>17:30</td>
+							<td>16:00</td>
 						</tr>
 						<tr>
 							<th scope="row">Start</th>
-							<td>17:45~</td>
+							<td>16:00~</td>
 						</tr>
 						<tr>
 							<th scope="row">Close</th>
-							<td>21:00</td>
+							<td>22:00</td>
 						</tr>
 					</tbody>
 				</table>
@@ -142,29 +145,25 @@
 				</ul> -->
 
 				<!-- Tab panes -->
-				<h2 class="mt-3">Live Streaming</h2>
+				<!-- <h2 class="mt-3">Live Streaming</h2> -->
 
 				<!-- <div class="tab-content"> -->
-				<div class="tab-pane active" id="first-tab" role="tabpanel" aria-labelledby="first-day">
-					<div class="video-wrapper mt-3">
-						<iframe src="https://www.youtube.com/embed/z0UYpyt_p4U" title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-					</div>
+				<!-- <div class="tab-pane active" id="first-tab" role="tabpanel" aria-labelledby="first-day"> -->
+				<!-- <div class="video-wrapper mt-3">
+					<iframe src="https://www.youtube.com/embed/z0UYpyt_p4U" title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div> -->
+				<div class="d-none">
 					<h2 class="mt-5">Timetable</h2>
 					<table class="table text-white">
 						<thead>
 							<tr class="t-head">
-								<th scope="col" class="w-25">2 / 25</th>
+								<th scope="col" class="w-25">Main Floor</th>
 								<th scope="col">Performer</th>
 							</tr>
 						</thead>
 						<tbody class="t-body">
-							<tr>
-								<th scope="row">17:45~</th>
-								<td>スパム大垣</td>
-							</tr>
 							<tr>
 								<th scope="row">18:25~</th>
 								<td>Ryu Ishizuka</td>
@@ -196,88 +195,62 @@
 			<!-- performers -->
 			<div id="performers-content" class="mt-5">
 				<h1 class="display-2 pt-3 mb-3">Performers</h1>
-				<div class="row row-cols-1 g-4 p-5 text-center">
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/spam_ogaki.jpeg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">スパム大垣</h5>
-								<p class="card-text">
-									スパム大垣は様々なプラットフォームで活動する、IMAとtonoshakeによるウルトラハイパーマルチメディアクリエイトユニットです<br>
-									【主な経歴】<br>
-									・Cluster GAMEJAM2021 in SUMMER パワー部門 ひとりでもみんなでもノリノリで賞 受賞<br>
-									・M-1グランプリ2021 2回戦進出（IMA）
-								</p>
+				<p class="" style="height: 300px">Comming soon...</p>
+				<div class="d-none">
+					<div class="row row-cols-1 g-4 p-5 text-center">
+						<div class="col">
+							<div class="card card-bg border-0">
+								<img src="img/ryu_ishizuka.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">Ryu Ishizuka</h5>
+									<p class="card-text">DJ</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/ryu_ishizuka.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">Ryu Ishizuka</h5>
-								<p class="card-text">
-									Talkboxという80'sに流行したモジュレーターを用いて、チューブを口にくわえてシンセサイザーの音を送り、
-									口の中で共鳴させて人間の声のように発声する演奏法と、AIで自動生成した映像による視覚表現を合わせることで、
-									新旧を織り交ぜたパフォーマンスを行う。
-								</p>
+						<div class="col">
+							<div class="card card-bg border-0">
+								<img src="img/sagyouyouBGM.png" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">作業用BGM</h5>
+									<p class="card-text">DJ</p>
+									</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/sagyouyouBGM.png" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">作業用BGM</h5>
-								<p class="card-text">作業用BGMを演奏するグループ 作業 (さぎょう、英語: occupation)
-									とは、日々の生活で行われ、名付けられている一群の活動と課題であり、個人と文化によって価値と意味があたえられたものである。
-									作業として音楽の演奏を行う。<br>
-									今回はディスプレイをパンチして演奏します！
-								</p>
+						<div class="col">
+							<div class="card card-bg border-0">
+								<img src="img/yamamorinoshiozumi.jpeg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">やまもりの塩澄</h5>
+									<p class="card-text">DJ</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/yamamorinoshiozumi.jpeg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">やまもりの塩澄</h5>
-								<p class="card-text">​​「　一一一 ー ー ー　l　: lllll：　l 　止まれ　」
-									路面標識に従ってライブパフォーマンスを進行する。スキャニング技術を用いて路面標識を走査し、収集した差異を再配置することで、路面観測(Rodewatching)を行う。<br>
-									Audio：zumisio　Visual：Asuka Morita & Kanata Yamagishi
-								</p>
+						<div class="col">
+							<div class="card card-bg border-0">
+								<img src="img/jacksonkaki.jpeg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">JACKSON kaki</h5>
+									<p class="card-text">DJ</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/jacksonkaki.jpeg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">JACKSON kaki</h5>
-								<p class="card-text">3DCG / VR,AR / Video Creator based in Tokyo , JAPAN and also he is
-									DJ plays in Shibuya. Influenced by the culture of alternative electronic music (IDM
-									/ Experimental / Avant-garde / UK Bass), he focuses on the extended expression of
-									music through new media such as 3DCG / VR/AR.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div class="card card-bg border-0">
-							<img src="img/fussy.jpg" class="card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title">fussy</h5>
-								<p class="card-text">
-									-- GUEST --<br>
-									複合現実(Mixed Reality)空間における音楽Live表現の可能性を研究している。<br>
-									2020年 IAMAS修了
-								</p>
+						<div class="col">
+							<div class="card card-bg border-0">
+								<img src="img/fussy.jpg" class="card-img-top" alt="...">
+								<div class="card-body">
+									<h5 class="card-title">fussy</h5>
+									<p class="card-text">
+										-- GUEST --<br>
+										複合現実(Mixed Reality)空間における音楽Live表現の可能性を研究している。<br>
+										2020年 IAMAS修了
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</main>
 	<footer class="bg-dark p-4 position-relative overflow-hidden">
 		<div class="d-flex flex-row-reverse position-relative">
