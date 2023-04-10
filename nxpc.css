@@ -1,33 +1,7 @@
-/* @font-face {
+@font-face {
 	font-family: A1Gothic_R;
 	src: url('font/AP-OTF-A1GothicStd-Regular.otf') format('truetype');
-} */
-
-/* ========== 源暎アンチック ========== */
-/* https://okoneya.jp/font/download.html */
-
-@font-face {
-	font-family: GenEiAntique;
-	src: url('font/GenEiAntiqueNv5-M.ttf') format('truetype');
 }
-
-@font-face {
-	font-family: GenEiAntique-p;
-	src: url('font/GenEiAntiquePv5-M.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: Helvetica-Neue;
-	src: url('font/helveticaneuecond.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: Helvetica-Neue-black;
-	src: url('font/helveticaneue-blackcond.ttf') format('truetype');
-}
-
-/* ========== */
-
 
 /* ========== 共通 ========== */
 html {
@@ -38,14 +12,18 @@ body {
 	min-height: 100vh;
 	min-height: -webkit-fill-available;
 
-	background-color: rgb(0, 70, 125);
+	background-color: rgb(0, 0, 0);
+	/* background-color: red; */
 
 	/* 背景色 */
 	/* font-size: 62.5%; */
 	color: rgb(255, 255, 255);
 	line-height: 1.5;
-	/* font-family: 'GenEiAntique-p'; */
-	font-family: "Helvetica-Neue";
+
+	/* font-family: "A1Gothic_R"; */
+	font-family: "nimbus-roman", serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .spam {
@@ -98,11 +76,11 @@ body {
 }
 
 .bg-video {
-	/* min-height: 100%; */
-	/* min-width: 100%; */
-	height: 100%;
-	width: 100%;
-	object-fit: fill;
+	min-height: 100%;
+	min-width: 100%;
+	/* height: 100%;
+	width: 100%; */
+	object-fit: cover;
 }
 
 /* ===== */
@@ -119,7 +97,7 @@ body {
 	top: 0px;
 
 	/* 画像 */
-	background-image: url("movie/back_ef_mobile.png");
+	background-image: url("img/");
 	/* background-repeat: no-repeat; */
 
 	z-index: -1;
@@ -275,7 +253,7 @@ footer {
 }
 
 #footer-logo {
-	width: 10vh;
+	width: 5vh;
 }
 
 /*==========*/
@@ -286,11 +264,12 @@ footer {
 @media screen and (min-width: 800px) {
 
 	main {
-		width: 500px;
+		width: 590px;
 	}
 
 	.title-logo {
-		width: 75%;
+		/* width: 75%; */
+		height: 80vh;
 	}
 
 	#spam-cv {
@@ -311,7 +290,7 @@ footer {
 	}
 
 	.title-logo {
-		width: 100%;
+		width: 95%;
 	}
 
 	#spam-cv {
